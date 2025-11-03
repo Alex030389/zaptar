@@ -1,0 +1,40 @@
+<div class="popup__wrap">
+
+  <div id="popup-order" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+
+        <button type="button" class="popup__close btn-reset"></button>
+
+        <form action="" class="popup__form form">
+
+          <textarea name="tour" rows="1" class="form__field" placeholder="Куда хотите отправиться?"></textarea>
+
+          <input type="text" name="name" class="form__field" placeholder="Как к Вам обращаться" required>
+
+          <input type="tel" name="phone" class="form__field" id="phone_1" placeholder="+7 (___) ___-____" required>
+
+          <input type="text" name="email" class="form__field" placeholder="Ваш E-mail">
+
+          <textarea name="comment" rows="1" class="form__field" placeholder="Комментарии"></textarea>
+
+          <div class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox" name="agreement" required>
+            <label class="form__checkbox-label">Я согласен на использование моих <a href="#"
+                target="_blank">персональных данных</a></label>
+          </div>
+
+          <div class="popup__wrap-btn">
+            <button type="submit" class="popup__btn btn-reset" disabled>
+              <span>Заказать путешествие</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+      <!--/popup__content-->
+    </div>
+    <!--/popup__body-->
+  </div>
+  <!--/popup-->
+</div>

@@ -1,0 +1,50 @@
+// ////////////////////////////////////////// Inter
+@font-face {
+  font-weight: 400;
+  font-family: Inter;
+  font-style: normal;
+
+  font-display: swap;
+  src: url(../font/Inter/Inter_18pt-Light.woff2),
+  url(../font/Inter/Inter_18pt-Light.woff);
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: Inter;
+  font-style: italic;
+
+  font-display: swap;
+  src: url(../font/Inter/Inter_18pt-LightItalic.woff2),
+  url(../font/Inter/Inter_18pt-LightItalic.woff);
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Inter;
+  font-style: normal;
+
+  font-display: swap;
+  src: url(../font/Inter/Inter_18pt-Medium.woff2),
+  url(../font/Inter/Inter_18pt-Medium.woff);
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Inter;
+  font-style: normal;
+
+  font-display: swap;
+  src: url(../font/Inter/Inter_18pt-Bold.woff2),
+  url(../font/Inter/Inter_18pt-Bold.woff);
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Inter;
+  font-style: italic;
+
+  font-display: swap;
+  src: url(../font/Inter/Inter_18pt-BoldItalic.woff2),
+  url(../font/Inter/Inter_18pt-BoldItalic.woff);
+}

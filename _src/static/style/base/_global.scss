@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-weight: 300;
+  font-size: $fz-main;
+  line-height: 22px;
+  font-family: $ff-main;
+  color: $c-main;
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+
+.main {
+  flex-grow: 1;
+  padding-top: $gutter * 4;
+  padding-bottom: $gutter * 4;
+  display: grid;
+  align-content: start;
+  gap: $gutter * 4;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// input auto-complete change color
+:-webkit-autofill {
+  box-shadow: 0 0 100px #fff inset;
+
+  -webkit-text-fill-color: currentColor;
+}
