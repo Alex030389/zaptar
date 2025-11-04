@@ -1,5 +1,101 @@
 <header class="header">
-  <div class="container header__container">
-   HEADER
-  </div>
+    <div class="header__top">
+        <div class="header__container container">
+            <div class="header__top-left">
+                @@include('../logo.html'})
+
+                <a class="header-address" href="#map">
+                    <svg class="header-address__icon" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#mark"></use>
+                    </svg>
+
+                    <span class="header-address__city">Брянск</span>
+
+                    <svg class="header-address__icon" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#down-chevron"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="header__contacts">
+                <a class="header-contact" href="tel:89308255335">
+                    <svg class="header-contact__icon" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="header-contact__text">8 (930) 825 53-35</span>
+                </a>
+
+                <a class="header-contact" href="tel:89206055335">
+                    <svg class="header-contact__icon" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="header-contact__text">8 (920) 605 53-35</span>
+                </a>
+
+                <a class="header-contact header-contact--has-divider" href="mailto:info@zaptar.ru">
+                    <svg class="header-contact__icon" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                    </svg>
+
+                    <span class="header-contact__text">info@zaptar.ru</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+        <div class="header__container container">
+            <div class="header__search header-search">
+                <div class="header-search__dropdown header-search-dropdown">
+                    <button class="header-search-dropdown__toggle">
+                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
+                        </svg>
+                        <span class="header-search-dropdown__caption">Каталог</span>
+                    </button>
+
+                    <nav class="header-search-dropdown__nav">
+                        <a class="header-search-dropdown__link" href="#">
+                            Каталог запчастей
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Каталог ТО
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Масла
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Аккумуляторы
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Автолампы
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Шины
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Диски
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Колпаки
+                        </a>
+                        <a class="header-search-dropdown__link" href="#">
+                            Болты, Гайки
+                        </a>
+                    </nav>
+                </div>
+
+                <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
+
+                <button class="header-search__button">
+                    <svg class="header-search__button-icon" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </div>
 </header>
