@@ -1,6 +1,6 @@
 /node_modules/
 /.git/
-/dist/
+#/dist/
 /.idea/
 /debug.log
 /**/_backstage
