@@ -4,7 +4,7 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(11, auto);
     grid-auto-flow: column;
-    gap: 8px $gutter * 2 ;
+    gap: $gutter * 2 $gutter * 6;
 
     @media (max-width: $xl) {
       grid-template-columns: repeat(5, 1fr);
@@ -24,7 +24,7 @@
 
   &__item {
     position: relative;
-    padding-left: $gutter * 4;
+    padding-left: $gutter * 12;
     display: flex;
     align-items: center;
   }

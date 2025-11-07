@@ -4,8 +4,8 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-right: $gutter;
-  padding-left: $gutter;
+  padding-right: $gutter * 3;
+  padding-left: $gutter * 3;
 
   //@media (max-width: $xl) {
   //  // max-width: 960px;
