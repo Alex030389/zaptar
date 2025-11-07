@@ -7,7 +7,7 @@
 
   &__box-btn {
     min-width: 216px;
-    padding-top: $gutter;
+    padding-top: $gutter * 3;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -23,7 +23,7 @@
       border-right: none;
       border-bottom: 1px solid #D9D9D9;
       max-width: 100%;
-      margin-bottom: $gutter * 2;
+      margin-bottom: $gutter * 6;
     }
   }
 
@@ -32,7 +32,7 @@
 
     width: 100%;
     min-height: 48px;
-    padding: $gutter $gutter * 2;
+    padding: $gutter * 3 $gutter * 6;
 
     font-size: 16px;
     line-height: 24px;
@@ -41,10 +41,10 @@
     transition: color .2s;
 
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: $gutter * 4;
 
       @media (max-width: $lg) {
-        margin-bottom: $gutter * 0.5;
+        margin-bottom: $gutter * 2;
       }
 
       @media (max-width: $md) {
@@ -77,18 +77,18 @@
     }
 
     @media (max-width: $lg) {
-      padding: $gutter;
+      padding: $gutter * 3;
       text-align: left;
     }
 
     @media (max-width: $md) {
-      padding: 0 6px;
+      padding: 0 $gutter;
       text-align: center;
     }
   }
 
   &__box-content {
-    padding: $gutter * 2;
+    padding: $gutter * 6;
     flex-grow: 1;
 
     @media (max-width: $md) {

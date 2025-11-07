@@ -26,7 +26,7 @@
       display: block;
       width: 16px;
       height: 16px;
-      margin-right: 8px;
+      margin-right: $gutter * 2;
 
       background-color: $c-accent;
       border-radius: 4px;

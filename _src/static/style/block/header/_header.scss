@@ -19,7 +19,7 @@
     margin-left: auto;
     display: grid;
     grid-auto-flow: column;
-    column-gap: 16px;
+    column-gap: $gutter * 4;
 
     @media (max-width: $md) {
       display: none;
@@ -33,7 +33,7 @@
   &__search {
     max-width: 696px;
     width: 100%;
-    margin-right: $gutter * 2;
+    margin-right: $gutter * 6;
   }
 
   &__actions {
@@ -81,7 +81,7 @@
   &__icon {
     width: 12px;
     height: 12px;
-    margin-right: 8px;
+    margin-right: $gutter * 2;
     color: $c-main;
     opacity: 0.45;
     transition: opacity 0.2s;
@@ -97,7 +97,7 @@
   }
 
   &--has-divider {
-    padding-left: 16px;
+    padding-left: $gutter * 4;
     border-left: 1px solid $c-main-6;
   }
 }
@@ -120,8 +120,8 @@
     background-color: #fff;
     border-top-right-radius: inherit;
     border-bottom-right-radius: inherit;
-    padding-left: 8px;
-    padding-right: 40px;
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 10;
 
     &::placeholder {
       color: $c-main-45;
@@ -165,8 +165,8 @@
     justify-content: center;
     background-color: $c-accent;
     min-width: 110px;
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: $gutter * 3;
+    padding-right: $gutter * 3;
     transition: background-color 0.2s;
 
     #{$self}:hover & {
@@ -178,7 +178,7 @@
     width: 16px;
     height: 16px;
     color: #fff;
-    margin-right: 8px;
+    margin-right: $gutter * 2;
   }
 
   &__caption {
@@ -190,7 +190,7 @@
     top: calc(100% + 4px);
     background-color: #fff;
     border-radius: 8px;
-    padding: 4px;
+    padding: $gutter;
     box-shadow: 0 6px 4px 0 #0000000D;
     display: flex;
     flex-direction: column;
@@ -218,8 +218,8 @@
 
   &__link {
     min-height: 32px;
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: $gutter * 3;
+    padding-right: $gutter * 3;
     display: flex;
     align-items: center;
     color: $c-main-88;
@@ -267,8 +267,8 @@
   min-width: 32px;
   min-height: 32px;
   display: flex;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
   border-radius: 6px;
   align-items: center;
   justify-content: center;
@@ -279,7 +279,7 @@
   }
 
   & > *:not(:first-child) {
-    margin-left: 8px;
+    margin-left: $gutter * 2;
   }
 
   &--accent {
@@ -299,13 +299,13 @@
   }
 
   &--ico {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
   }
 
   &:not(#{$self}--ico) {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: $gutter * 4;
+    padding-right: $gutter * 4;
   }
 
   &__ico {
@@ -343,7 +343,7 @@
     right: 0;
     position: absolute;
     top: calc(100% + 4px);
-    padding: 4px;
+    padding: $gutter;
     color: $c-main;
     z-index: 100;
     min-width: 183px;
@@ -370,8 +370,8 @@
 
   &__link {
     min-height: 32px;
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: $gutter * 3;
+    padding-right: $gutter * 3;
     display: flex;
     align-items: center;
     color: $c-main-88;
@@ -401,6 +401,6 @@
   &__ico {
     width: 16px;
     height: 16px;
-    margin-right: 8px;
+    margin-right: $gutter * 2;
   }
 }

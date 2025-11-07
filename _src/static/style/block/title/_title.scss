@@ -23,7 +23,7 @@ h2 {
   line-height: 46px;
   font-weight: 700;
   color: $c-main;
-  margin-bottom: $gutter * 2;
+  margin-bottom: $gutter * 6;
 
   @media (max-width: $lg) {
     font-size: 24px;
@@ -33,7 +33,7 @@ h2 {
   @media (max-width: $md) {
     font-size: 20px;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: $gutter * 4;
   }
 }
 
@@ -42,9 +42,9 @@ h3 {
   line-height: 24px;
   font-weight: 600;
   color: $c-main-88;
-  margin-bottom: $gutter * 2;
+  margin-bottom: $gutter * 6;
 
   @media (max-width: $md) {
-    margin-bottom: $gutter;
+    margin-bottom: $gutter * 3;
   }
 }

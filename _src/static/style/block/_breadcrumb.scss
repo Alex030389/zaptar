@@ -15,7 +15,7 @@
 
 .breadcrumb__link {
   color: $c-main-45;
-  padding-right: 22px;
+  padding-right: $gutter * 6;
 
   &::after {
     content: "/";

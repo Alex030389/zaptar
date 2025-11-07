@@ -4,11 +4,11 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: $gutter * 2;
+    gap: $gutter * 6;
 
     @media (max-width: $lg) {
       grid-template-columns: repeat(2, 1fr);
-      gap: $gutter;
+      gap: $gutter * 3;
     }
 
     @media (max-width: $sm) {
@@ -28,14 +28,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 16px 16px 32px;
+    padding: $gutter * 4 $gutter * 4 $gutter * 4 $gutter * 8;
 
     @media (max-width: $md) {
-      padding: 8px;
+      padding: $gutter * 2;
     }
 
     @media (max-width: $sm) {
-      padding-left: 16px;
+      padding-left: $gutter * 4;
     }
 
     &:hover {

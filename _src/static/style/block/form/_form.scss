@@ -5,11 +5,11 @@
   &__top {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: $gutter * 4;
+    gap: $gutter * 12;
 
     @media (max-width: $xl) {
       grid-template-columns: 1fr;
-      gap: $gutter * 2;
+      gap: $gutter * 6;
       align-self: center;
     }
 
@@ -25,20 +25,20 @@
   &__bottom {
     display: grid;
     grid-template-columns: 1fr 549px;
-    gap: $gutter;
+    gap: $gutter * 3;
 
-    padding-top: $gutter * 2;
-    margin-top: $gutter * 2;
+    padding-top: $gutter * 6;
+    margin-top: $gutter * 6;
     border-top: 1px solid #D9D9D9;
 
     &--column {
       grid-template-columns: 1fr;
       align-self: start;
-      gap: $gutter * 2;
+      gap: $gutter * 6;
       max-width: 552px;
 
       @media (max-width: $xl) {
-        gap: $gutter;
+        gap: $gutter * 3;
       }
     }
 
@@ -67,7 +67,7 @@
     position: relative;
 
     @media (max-width: $xl) {
-      padding-top: $gutter * 2;
+      padding-top: $gutter * 6;
     }
 
     &::after {
@@ -75,7 +75,7 @@
       display: block;
       position: absolute;
       top: 0;
-      left: -$gutter * 2;
+      left: -$gutter * 6;
       background-color: #D9D9D9;
       width: 1px;
       height: 100%;
@@ -94,7 +94,7 @@
     justify-content: space-between;
 
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: $gutter * 4;
     }
 
     @media (max-width: $md) {
@@ -106,21 +106,21 @@
   &__label {
     color: $c-main-88;
     position: relative;
-    margin-right: $gutter;
+    margin-right: $gutter * 3;
 
     @media (max-width: $md) {
-      padding-left: $gutter;
-      margin-bottom: $gutter * 0.5;
+      padding-left: $gutter * 3;
+      margin-bottom: $gutter * 2;
     }
 
     span {
       color: $c-accent;
-      padding-left: 3px;
+      padding-left: $gutter;
     }
   }
 
   &__input {
-    padding: 5px $gutter;
+    padding: $gutter $gutter * 3;
     color: $c-main-88;
 
     border: 1px solid #D9D9D9;
@@ -141,7 +141,7 @@
   }
 
   &__footer-checkbox {
-    margin-bottom: $gutter * 2;
+    margin-bottom: $gutter * 6;
   }
 
   &__btn {
