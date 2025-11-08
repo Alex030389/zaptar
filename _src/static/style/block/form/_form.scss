@@ -39,6 +39,7 @@
 
       @media (max-width: $xl) {
         gap: $gutter * 3;
+        max-width: 100%;
       }
     }
 
@@ -111,10 +112,12 @@
     color: $c-main-88;
     position: relative;
     margin-right: $gutter * 3;
+    min-width: 200px;
 
     @media (max-width: $md) {
       padding-left: $gutter * 3;
       margin-bottom: $gutter * 2;
+      min-width: 100%;
     }
 
     span {
@@ -129,8 +132,8 @@
 
     border: 1px solid #D9D9D9;
     border-radius: 6px;
-    min-width: 337px;
     width: 100%;
+    box-shadow: 0 2px 4px 0 #00000005;
 
     &:disabled {
       background-color: #0000000A;
@@ -148,11 +151,5 @@
   &__btn {
     width: 100%;
     border-radius: 8px;
-
-    &:disabled {
-      border: 1px solid #D9D9D9;
-      background-color: #0000000A;
-      color: $c-main-25;
-    }
   }
 }
