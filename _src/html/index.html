@@ -13,16 +13,10 @@
             <a href="registration.html">Регистрация</a>
         </li>
         <li>
-            Авторизация
-        </li>
-        <li>
-            Профиль
-        </li>
-        <li>
             Мои финансы
         </li>
         <li>
-            Чат
+            <a href="chat.html">Чат</a>
         </li>
         <li>
             Гараж
@@ -37,7 +31,7 @@
             Корзина
         </li>
         <li>
-            Каталог автозапчастей
+            <a href="catalog.html">Каталог автозапчастей</a>
         </li>
         <li>
             Текстовые страницы
@@ -50,10 +44,16 @@
     <h3>Модалки</h3>
     <ol>
         <li>
-            <button disabled>Авторизация</button>
+            <button data-modal="modal-auth">Авторизация</button>
+        </li>
+        <li>
+            <button data-modal="drawer-profile">Профиль</button>
         </li>
     </ol>
 
 </main>
 
+@@include('block/footer/modal.html')
+@@include('block/footer/drawer.html')
+@@include('block/footer/drawer-profile-edit.html')
 @@include('block/scripts.html')

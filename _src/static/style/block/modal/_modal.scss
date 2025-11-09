@@ -1,0 +1,222 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: #0A1A31BF;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all .8s ease 0s;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--open .modal__inner {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  &__inner {
+    height: 100%;
+    opacity: 0;
+
+    display: flex;
+    justify-content: center;
+    transition: all .5s ease;
+
+    &--open-top {
+      transform: translate(0, -100%);
+      align-items: center;
+      padding: $gutter * 3;
+    }
+
+    &--open-right {
+      justify-content: flex-end;
+      transform: translate(100%, 0);
+    }
+  }
+
+  &__content {
+    position: relative;
+    background-color: #fff;
+
+    &--radius {
+      border-radius: 16px;
+      width: 434px;
+    }
+  }
+
+  &__close {
+    @extend .btn-reset;
+
+    position: absolute;
+    top: 20px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--right {
+      right: 20px;
+    }
+
+    &--left {
+      left: 20px;
+
+      @media (max-width: $md) {
+        left: 12px;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $c-main-45;
+      transition: scale .2s;
+
+      &:hover {
+        scale: 1.2;
+      }
+    }
+
+    @media (max-width: $md) {
+      top: 16px;
+    }
+  }
+
+  &__header {
+    padding: $gutter * 5 $gutter * 6 0;
+
+    border-bottom: 1px solid $c-main-6;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: $gutter * 6;
+    padding: $gutter * 3 $gutter * 6 $gutter * 6;
+  }
+
+  &__form {
+    display: grid;
+    gap: $gutter * 6;
+
+    @media (max-width: $md) {
+      gap: $gutter * 3;
+    }
+  }
+
+  &__wrapper-input-login {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/icon/auth-user.svg") no-repeat 50%;
+    }
+  }
+
+  &__wrapper-input-password {
+    position: relative;
+  }
+
+  &__input-password {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__input {
+    padding-left: $gutter * 9;
+  }
+
+  &__fields-row {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  &__fields-item {
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-accent;
+    transition: color .2s;
+
+    &:hover {
+      color: $c-accent-dark;
+    }
+
+    @media (max-width: $md) {
+      margin-top: $gutter * 2;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-bottom: $gutter;
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-accent;
+    transition: color .2s;
+
+    &:hover {
+      color: $c-accent-dark;
+    }
+  }
+
+  &__alert {
+    display: flex;
+    align-items: center;
+    background-color: #E6F4FF;
+    border-radius: 8px;
+    border: 1px solid #91CAFF;
+    padding: $gutter * 2 $gutter * 3;
+  }
+
+  &__alert-ico {
+    margin-right: $gutter * 2;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $c-accent;
+    }
+  }
+
+  &__alert-text {
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-accent;
+  }
+}

@@ -29,10 +29,10 @@
 @import "block/select/select";
 @import "block/checkbox/checkbox";
 @import "block/tabs/tabs";
-
+@import "block/modal/modal";
+@import "block/drawer/drawer";
 
 @import "block/nav";
-@import "block/modal";
 @import "block/intro";
 @import "block/brands";
 @import "block/categories";
@@ -40,6 +40,9 @@
 
 @import "block/index-demo";
 @import "block/registration";
+@import "block/search-auto";
+@import "block/chat";
+@import "block/notification";
 
 @import "block/footer/footer";
 

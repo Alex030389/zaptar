@@ -1,0 +1,157 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+
+<main class="main">
+    <!-- //////////////////////////////////////////////////////////  -->
+    @@include('block/breadcrumb.html')
+
+    <div class="container">
+        <section class="catalog">
+            <h2>Каталог автозапчастей</h2>
+            <div class="tabs">
+                <div class="tabs__box-btn">
+                    <button class="tabs__btn tabs__btn--active" tab="1">Поиск автомобиля <br>по VIN (FRAME)</button>
+                    <button class="tabs__btn" tab="2">Поиск автомобиля <br>из списка</button>
+                </div>
+
+                <div class="tabs__box-content">
+                    <div class="tabs__content tabs__content--active" tab-content="1">
+                        <form action="" class="form">
+                            <div class="form__top">
+                                <div class="form__column">
+                                    <div class="search-auto">
+                                        <div class="search-auto__content">
+                                            <div class="search-auto__wrapper-input">
+                                                <input type="text" name="search" class="search-auto__input form__input" placeholder="Введите VIN или FRAME">
+                                                <button type="button" class="search-auto__input-btn">
+                                                    <svg>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="search-auto__info">
+                                                Пример: <button class="search-auto__link">WAUBH54B11N111054</button>
+                                            </div>
+                                        </div>
+                                        <div class="search-auto__footer">
+                                            <button type="button" class="search-auto__footer-btn btn" disabled>
+                                                Сбросить
+                                            </button>
+                                            <button type="button" class="search-auto__footer-btn btn" disabled>
+                                                Найти
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div >
+                    <div class="tabs__content" tab-content="2">
+                        <form action="" class="form">
+                            <div class="form__top">
+                                <div class="form__column">
+                                    <div class="search-auto-list">
+                                        <div class="search-auto-list__list">
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Марка автомобиля</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите марку", "value": "choose" },
+                                                "option2": { "title": "Mercedes", "value": "Mercedes" },
+                                                "option3": { "title": "BMW", "value": "BMW" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Модель</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите модель", "value": "choose" },
+                                                "option2": { "title": "CINQUECENTO ABARTH", "value": "CINQUECENTO ABARTH" },
+                                                "option3": { "title": "CINQUECENTO ABARTH", "value": "CINQUECENTO ABARTH" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Каталог</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите каталог", "value": "choose" },
+                                                "option2": { "title": "CINQUECENTO ABARTH", "value": "CINQUECENTO ABARTH" },
+                                                "option3": { "title": "CINQUECENTO ABARTH", "value": "CINQUECENTO ABARTH" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Displacemen</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите Displacemen", "value": "choose" },
+                                                "option2": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" },
+                                                "option3": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Power</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите Power", "value": "choose" },
+                                                "option2": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" },
+                                                "option3": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Руль</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите сторону", "value": "choose" },
+                                                "option2": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" },
+                                                "option3": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Bodywork type</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите bodywork type", "value": "choose" },
+                                                "option2": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" },
+                                                "option3": { "title": "CC1.4 | 1368 PT", "value": "CC1.4 | 1368 PT" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Топливо</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите топливо", "value": "choose" },
+                                                "option2": { "title": "CMBBZ | БЕНЗИН", "value": "CMBBZ | БЕНЗИН" },
+                                                "option3": { "title": "CMBBZ | БЕНЗИН", "value": "CMBBZ | БЕНЗИН" }
+                                                })
+                                            </div>
+                                            <div class="search-auto-list__item">
+                                                <label for="brand" class="search-auto-list__label">Trim level</label>
+                                                @@include('block/select.html', {
+                                                "id": "brand",
+                                                "option1": { "title": "Выберите Trim level", "value": "choose" },
+                                                "option2": { "title": "CMBBZ | БЕНЗИН", "value": "CMBBZ | БЕНЗИН" },
+                                                "option3": { "title": "CMBBZ | БЕНЗИН", "value": "CMBBZ | БЕНЗИН" }
+                                                })
+                                            </div>
+                                        </div>
+                                        <div class="search-auto-list__footer">
+                                            <button type="button" class="search-auto__footer-btn btn-primary">
+                                                Сбросить
+                                            </button>
+                                            <button type="button" class="search-auto__footer-btn btn">
+                                                Найти
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')
