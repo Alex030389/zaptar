@@ -2,16 +2,12 @@
   $self: &;
 
   position: relative;
-
-  &__button {
-    width: 100%;
-    position: relative;
-  }
+  width: 100%;
 
   &__ico {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 12px;
     width: 16px;
     height: 16px;
     transform: translateY(-50%);
@@ -63,7 +59,7 @@
     }
 
     &--active {
-      background-color: #E6F4FF;
+      background-color: $c-accent-light;
       font-weight: 600;
       position: relative;
 
@@ -80,7 +76,7 @@
       }
 
       &:hover {
-        background-color: #E6F4FF;
+        background-color: $c-accent-light;
       }
     }
 
@@ -92,7 +88,7 @@
         left: 0;
         height: 8px;
         width: 100%;
-        background-color: #E6F4FF;
+        background-color: $c-accent-light;
         pointer-events: none;
       }
     }

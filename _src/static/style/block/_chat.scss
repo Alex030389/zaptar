@@ -2,157 +2,310 @@
   $self: &;
 
   &__header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: $gutter * 6;
+    padding-bottom: $gutter * 4;
+    border-bottom: 1px solid $c-main-6;
   }
 
-  &__header-wrapper {
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: $c-main;
+  }
+
+  &__tag {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $c-accent-light;
+    border-radius: 4px;
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+
+    min-height: 22px;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-accent;
   }
 
   &__header-btn {
-    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    position: relative;
 
-    &:not(:last-child) {
-      margin-right: $gutter * 4;
-
-      svg {
-        fill: $c-main-88;
-      }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $gutter * 2;
 
     svg {
       width: 16px;
       height: 16px;
-      fill: #fff;
-      margin-right: $gutter * 2;
+      fill: $c-main-88;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -8px;
+      display: block;
+      height: 100%;
+      width: 1px;
+      background-color: $c-main-6;
     }
   }
 
-  &__table-row {
+  &__content {
     display: grid;
-    grid-template-columns: minmax(69px, auto) 1fr minmax(165px, auto) minmax(176px, auto);
-    font-size: 12px;
-    line-height: 20px;
-    border-bottom: 1px solid #F0F0F0;
-    grid-template-areas: "id name data action";
-
-    @media (max-width: $sm) {
-      grid-template-columns: 1fr auto;
-      grid-template-areas:
-        "name action"
-        "id data";
-    }
-
-    &:first-child {
-      #{$self}__table-cell {
-        background-color: #00000005;
-        color: $c-main-45;
-        padding: $gutter * 4;
-
-        @media (max-width: $sm) {
-          display: none;
-        }
-      }
-    }
-
-    span {
-      display: none;
-
-      @media (max-width: $sm) {
-        display: inline-block;
-      }
-    }
+    gap: $gutter * 6;
+    padding: $gutter * 2;
   }
 
-  &__table-cell {
-    padding: $gutter * 4;
-
-    @media (max-width: $sm) {
-      padding: $gutter * 2;
-    }
-
-    &--id {
-      grid-area: id;
-
-      @media (max-width: $sm) {
-        padding-top: 0;
-      }
-    }
-
-    &--name {
-      grid-area: name;
-    }
-
-    &--data {
-      grid-area: data;
-
-      @media (max-width: $sm) {
-        padding-top: 0;
-        justify-self: right;
-      }
-    }
-
-    &--action {
-      grid-area: action;
-
-      display: grid;
-      grid-auto-flow: column;
-      gap: $gutter * 4;
-    }
+  &__form {
+    display: grid;
+    gap: $gutter * 6;
   }
 
-  &__table-btn {
+  &__footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: $gutter * 4;
+    align-items: center;
+    justify-self: end;
+  }
+
+  &__clip {
+    width: 32px;
+    height: 32px;
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    margin-right: $gutter * 2;
 
-    svg {
-      width: 14px;
-      height: 14px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -8px;
+      display: block;
+      height: 100%;
+      width: 1px;
+      background-color: $c-main-6;
     }
   }
 
-  &__filter {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: $gutter * 2;
-    margin-bottom: $gutter * 6;
+  &__clip-input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 
-  &__filter-text {
-    color: #000000A6;
-  }
-
-  &__filter-item {
+  &__clip-ico {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    border-radius: 4px;
-    background-color: #00000005;
-    padding-left: $gutter * 2;
-    padding-right: $gutter * 2;
-
-    font-size: 12px;
-    line-height: 20px;
-    color: $c-main-88;
-
-    span {
-      color: $c-main-45;
-      padding-right: 2px;
-    }
+    justify-content: center;
 
     svg {
-      width: 12px;
-      height: 12px;
+      width: 16px;
+      height: 16px;
       fill: $c-main-88;
-      margin-left: $gutter;
+    }
+  }
+}
+
+.chat-message {
+  $self: &;
+
+  position: relative;
+
+  display: grid;
+  gap: $gutter * 3;
+
+  padding: $gutter * 4;
+  border-radius: 8px;
+  max-width: 90%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 16px;
+    height: 8px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 16px;
+    height: 8px;
+    background-color: #fff;
+  }
+
+  &--admin {
+    background-color: $c-light;
+
+    &::before {
+      left: -12px;
+      background-color: $c-light;
+    }
+
+    &::after {
+      left: -16px;
+      border-bottom-right-radius: 100%;
+    }
+  }
+
+  &--user {
+    background-color: $c-accent-light;
+    left: 10%;
+
+    &::before {
+      right: -10px;
+      background-color: $c-accent-light;
+    }
+
+    &::after {
+      right: -16px;
+      border-bottom-left-radius: 100%;
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    gap: $gutter * 2;
+
+    @media (max-width: $sm) {
+      grid-auto-flow: row;
+    }
+  }
+
+  &__person {
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-main-25;
+
+    #{$self}--admin & {
+      justify-self: end;
+    }
+
+    #{$self}--user & {
+      justify-self: start;
+    }
+
+    @media (max-width: $sm) {
+      #{$self}--user & {
+        justify-self: end;
+      }
+    }
+
+    @media (max-width: $sm) {
+      #{$self}--admin & {
+        justify-self: start;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $gutter * 2;
+
+    #{$self}--admin & {
+      justify-self: start;
+    }
+
+    #{$self}--user & {
+      order: 1;
+      justify-self: end;
+    }
+
+    @media (max-width: $sm) {
+      #{$self}--user & {
+        order: -1;
+      }
+    }
+  }
+
+  &__data {
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-main-25;
+
+    #{$self}--admin & {
+      margin-left: $gutter * 2;
+    }
+
+    #{$self}--user & {
+      margin-right: $gutter * 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: #D9D9D9;
+      border-radius: 50%;
+    }
+
+    #{$self}--admin &::after {
+      left: -8px;
+    }
+
+    #{$self}--user &::after  {
+      right: -8px;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+
+    #{$self}--admin & {
+      color: $c-main-88;
+    }
+
+    #{$self}--user & {
+      color: $c-accent;
+      order: 1;
+    }
+
+    @media (max-width: $sm) {
+      #{$self}--user & {
+        //order: -1;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-main-45;
+
+    #{$self}--admin & {
+      justify-self: start;
+    }
+
+    #{$self}--user & {
+      justify-self: end;
     }
   }
 }

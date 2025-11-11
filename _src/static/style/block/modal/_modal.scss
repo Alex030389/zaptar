@@ -198,7 +198,7 @@
   &__alert {
     display: flex;
     align-items: center;
-    background-color: #E6F4FF;
+    background-color: $c-accent-light;
     border-radius: 8px;
     border: 1px solid #91CAFF;
     padding: $gutter * 2 $gutter * 3;
