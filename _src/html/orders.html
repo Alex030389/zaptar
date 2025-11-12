@@ -10,23 +10,215 @@
                 <h2 class="title">Заказы</h2>
 
                 <div class="section-header__group">
-                    <a class="btn-primary" href="#">Архив заказов</a>
+                    <a class="btn-primary" href="#">
+                        <svg class="orders__btn-ico" aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#mark"></use>
+                        </svg>
 
-                    <button class="btn-primary" type="button">Фильтр</button>
+                        Архив заказов
+                    </a>
+
+                    <button class="btn-primary" type="button">
+                        <svg class="orders__btn-ico" aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
+                        </svg>
+
+                        Фильтр
+                    </button>
                 </div>
             </div>
 
             <div class="table">
-                <div class="table__row">
-                    <div class="table__cell">
-                    </div>
+                <div class="table__scrollbar scrollbar scrollbar--horizontal">
+                     <table class="table__inner">
+                         <tbody>
+                             <tr>
+                                 <th>
+                                     <!-- todo: сделать чтобы выделялись все чекбоксы в колонке-->
+                                     <div class="checkbox">
+                                         <input id="cel-head" type="checkbox" class="checkbox__input">
+                                         <label for="cel-head" class="checkbox__label"></label>
+                                     </div>
+                                 </th>
+                                 <th>
+                                     Заказ
+                                 </th>
+                                 <th>
+                                     Действия
+                                 </th>
+                                 <th>
+                                     Бренд
+                                 </th>
+                                 <th>
+                                     Артикул
+                                 </th>
+                                 <th>
+                                     Наименование
+                                 </th>
+                                 <th>
+                                     Поставщик
+                                 </th>
+                                 <th>
+                                    ))
+                                 </th>
+                                 <th>
+                                     Склад
+                                 </th>
+                                 <th>
+                                     Срок
+                                 </th>
+                                 <th>
+                                     Ожидаемая дата доставки
+                                 </th>
+                                 <th>
+                                     Количество
+                                 </th>
+                                 <th>
+                                     <button>
+                                         Цена
+                                     </button>
+                                 </th>
+                                 <th>
+                                     Сумма
+                                 </th>
+                                 <th>
+                                     <button>
+                                         Статус
+                                     </button>
+                                 </th>
+                                 <th>
+                                     Комментарий
+                                 </th>
+                                 <th>
+                                     Адрес
+                                 </th>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     <div class="checkbox">
+                                         <input id="cel-1" type="checkbox" class="checkbox__input">
+                                         <label for="cel-1" class="checkbox__label"></label>
+                                     </div>
+                                 </td>
+                                 <td class="orders-table__data">
+                                     71413536<br>
+                                     15.11.2024<br>
+                                     20:41:51<br>
+                                 </td>
+                                 <td>
+                                     Действия
+                                 </td>
+                                 <td>
+                                     Philips
+                                 </td>
+                                 <td>
+                                     85126
+                                 </td>
+                                 <td>
+                                     Лампа ксенон d2r 5000к
+                                 </td>
+                                 <td>
+                                     zsps-
+                                 </td>
+                                 <td>
+
+                                 </td>
+                                 <td>
+                                     Склад
+                                 </td>
+                                 <td>
+                                     3-6 дн.
+                                 </td>
+                                 <td>
+                                     22.11.2024 - 27.11.2024
+                                 </td>
+                                 <td>
+                                     Количество
+                                 </td>
+                                 <td>
+                                     <button>
+                                         Цена
+                                     </button>
+                                 </td>
+                                 <td>
+                                     Сумма
+                                 </td>
+                                 <td>
+                                     <button>
+                                         Статус
+                                     </button>
+                                 </td>
+                                 <td>
+                                     Комментарий
+                                 </td>
+                                 <td>
+                                     Адрес
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     <div class="checkbox">
+                                         <input id="cel-2" type="checkbox" class="checkbox__input">
+                                         <label for="cel-2" class="checkbox__label"></label>
+                                     </div>
+                                 </td>
+                                 <td>
+                                     Заказ
+                                 </td>
+                                 <td>
+                                     Действия
+                                 </td>
+                                 <td>
+                                     Бренд
+                                 </td>
+                                 <td>
+                                     Артикул
+                                 </td>
+                                 <td>
+                                     Наименование
+                                 </td>
+                                 <td>
+                                     Поставщик
+                                 </td>
+                                 <td>
+
+                                 </td>
+                                 <td>
+                                     Склад
+                                 </td>
+                                 <td>
+                                     Срок
+                                 </td>
+                                 <td>
+                                     Ожидаемая дата доставки
+                                 </td>
+                                 <td>
+                                     Количество
+                                 </td>
+                                 <td>
+                                     <button>
+                                         Цена
+                                     </button>
+                                 </td>
+                                 <td>
+                                     Сумма
+                                 </td>
+                                 <td>
+                                     <button>
+                                         Статус
+                                     </button>
+                                 </td>
+                                 <td>
+                                     Комментарий
+                                 </td>
+                                 <td>
+                                     Адрес
+                                 </td>
+                             </tr>
+                         </tbody>
+                    </table>
                 </div>
-                <div class="table__row">
-                    <div class="table__cell"></div>
-                </div>
-                <div class="table__row">
-                    <div class="table__cell"></div>
-                </div>
+
             </div>
         </section>
     </div>

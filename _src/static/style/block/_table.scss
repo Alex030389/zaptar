@@ -1,0 +1,37 @@
+.table {
+  &__scrollbar {
+    padding-bottom: 2px;
+  }
+
+  &__inner {
+    //table-layout: fixed;
+    position: relative;
+    //width: 100%;
+    width: 2000px;
+  }
+
+  th,
+  td {
+    padding: $gutter * 2 $gutter * 4;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+
+  th {
+    color: $c-main-45;
+  }
+
+  tr {
+    &:not(:first-child) {
+      border-bottom: 1px solid #F0F0F0;
+    }
+  }
+
+  th {
+    background-color: $c-light;
+  }
+
+  td {
+
+  }
+}

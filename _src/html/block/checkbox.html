@@ -1,7 +1,5 @@
-<div class="checkbox">
-    <div class="checkbox__wrapper-input">
-        <input id="@@id" type="checkbox" class="checkbox__input" checked required>
-        <label for="@@id"></label>
-    </div>
+<div class="checkbox @@if (context.hasText === true) {checkbox--has-text}">
+    <input id="@@id" type="checkbox" class="checkbox__input" checked required>
+    <label for="@@id" class="checkbox__label"></label>
     <p class="checkbox__text">@@text</p>
 </div>
