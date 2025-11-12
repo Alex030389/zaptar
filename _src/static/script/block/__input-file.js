@@ -21,15 +21,13 @@ if (fileInputs.length) {
       return;
     }
 
-    // if (files.length === 1) {
-    //   fileLabel.textContent = files[0].name.slice(0, 10) + '...';
-    // } else if (files.length <= 3) {
-    //   fileLabel.textContent = Array.from(files).map(f => f.name.slice(0, 10) + '...').join(', ');
-    // } else {
-    //   fileLabel.textContent = `${files.length} файлов выбрано`;
-    // }
-
-    fileLabel.textContent = `${files.length} файлов выбрано`;
+    if (files.length === 1) {
+      fileLabel.textContent = `${files.length} файл выбран`;
+    } else if (files.length <= 4) {
+      fileLabel.textContent = `${files.length} файла выбрано`;
+    } else {
+      fileLabel.textContent = `${files.length} файлов выбрано`;
+    }
 
     dropZone.classList.remove('form__file--bg');
   }

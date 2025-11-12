@@ -246,7 +246,7 @@
 
   &__menu {
     position: absolute;
-    top: calc(100% + 4px);
+    top: calc(100% + $gutter);
     background-color: #fff;
     border-radius: 8px;
     padding: $gutter;
@@ -268,10 +268,12 @@
       height: 4px;
     }
 
-    #{$self}:hover & {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
+    @media (min-width: $md) {
+      #{$self}:hover & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
     }
   }
 

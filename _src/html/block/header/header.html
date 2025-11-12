@@ -94,7 +94,13 @@
         <div class="header__container container">
             <div class="header__search header-search">
                 <div class="header-search__dropdown header-search-dropdown">
-                    <button class="header-search-dropdown__toggle">
+                    <button class="header-search-dropdown__toggle d-md-none">
+                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
+                        </svg>
+                        <span class="header-search-dropdown__caption">Каталог</span>
+                    </button>
+                    <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
                         <svg class="header-search-dropdown__icon" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>

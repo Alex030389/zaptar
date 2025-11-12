@@ -13,7 +13,7 @@
   visibility: hidden;
   opacity: 0;
 
-  transition: all .8s ease 0s;
+  transition: all .4s ease 0s;
 
   &--open {
     visibility: visible;
@@ -27,11 +27,11 @@
 
   &__inner {
     height: 100%;
-    opacity: 0;
+    opacity: 1;
 
     display: flex;
     justify-content: center;
-    transition: all .8s ease 0s;
+    transition: all .4s ease 0s;
 
     &--open-top {
       transform: translate(0, -100%);
@@ -42,6 +42,11 @@
     &--open-right {
       justify-content: flex-end;
       transform: translate(100%, 0);
+    }
+
+    &--open-left {
+      justify-content: flex-start;
+      transform: translate(-100%, 0);
     }
   }
 

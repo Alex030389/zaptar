@@ -99,12 +99,10 @@
     transform: translateY(-50%);
     border-radius: 4px;
 
-    width: 104px;
-    height: 40px;
+    min-width: 104px;
 
     @media (max-width: $md) {
-      width: auto;
-      height: auto;
+      min-width: auto;
     }
   }
 

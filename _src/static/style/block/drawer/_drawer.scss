@@ -1,8 +1,17 @@
 .drawer {
   &__content {
     width: 400px;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
+
+    .modal__inner--open-left & {
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+
+    .modal__inner--open-right & {
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+    }
+
 
     @media (max-width: $md) {
       width: 90%;
@@ -65,7 +74,6 @@
     width: 100%;
   }
 
-
   &__form {
     padding: $gutter * 6;
 
@@ -105,5 +113,8 @@
   &__select-label {
     display: inline-block;
     margin-bottom: $gutter * 2;
+  }
+
+  &__menu {
   }
 }

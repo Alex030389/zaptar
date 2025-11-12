@@ -132,12 +132,19 @@
       color: $c-main-45;
       padding-right: 2px;
     }
+  }
+
+  &__filter-btn {
+    margin-left: $gutter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     svg {
       width: 12px;
       height: 12px;
       fill: $c-main-88;
-      margin-left: $gutter;
+
     }
   }
 }
