@@ -1,6 +1,4 @@
 .btn {
-  @extend .btn-reset;
-
   background-color: $c-accent;
   display: flex;
   align-items: center;
@@ -39,8 +37,6 @@
 }
 
 .btn-primary {
-  @extend .btn-reset;
-
   background-color: #fff;
   border: 1px solid $c-main-25;
   border-radius: 6px;

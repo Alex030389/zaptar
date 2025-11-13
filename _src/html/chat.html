@@ -16,11 +16,11 @@
                 </div>
 
                 <div class="section-header__group">
-                    <button type="button" class="chat__header-btn">
+                    <span class="chat__header-btn">
                         <svg>
                             <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>
                         </svg>
-                    </button>
+                    </span>
                     <button type="button" class="btn-primary">
                         Назад
                     </button>
@@ -80,7 +80,7 @@
                     <div class="chat-message__img"></div>
                 </div>
                 <form action="" class="chat__form">
-                    <textarea class="form__input" id="chat-text" placeholder="Сообщение"></textarea>
+                    <textarea class="form__textarea" id="chat-text" placeholder="Сообщение"></textarea>
                     <div class="chat__footer">
                         <div class="chat__clip" data-dropzone>
                             <input name="file" type="file" id="input-file" class="chat__clip-input" multiple accept="image/*" data-input="file">
@@ -91,8 +91,8 @@
                                     data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
                                     data-input-placeholder="Нажмите в эту область, чтобы загрузить файлы"
                                 ></span>
-                                <span class="chat__clip-ico">
-                                    <svg>
+                                <span class="btn-light btn-light--size-l">
+                                    <svg class="btn-light__ico">
                                         <use xlink:href="static/img/symbol/sprite.svg#paper"></use>
                                      </svg>
                                 </span>

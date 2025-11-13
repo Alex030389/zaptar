@@ -62,19 +62,5 @@
   &__table-row {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  &__table-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-
-    svg {
-      width: 14px;
-      height: 14px;
-      fill: $c-main-88;
-    }
-  }
 }
 

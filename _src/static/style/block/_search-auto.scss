@@ -16,9 +16,6 @@
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
-    display: block;
-    width: 14px;
-    height: 14px;
 
     svg {
       fill: $c-main-45;
@@ -30,8 +27,6 @@
   }
 
   &__link {
-    @extend .btn-reset;
-
     text-decoration: underline dotted;
     text-decoration-thickness: 8%;
     text-underline-offset: 16%;

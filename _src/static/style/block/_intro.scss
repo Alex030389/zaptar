@@ -133,8 +133,6 @@
   }
 
   &__search-link {
-    @extend .btn-reset;
-
     text-decoration: underline dotted;
     text-decoration-thickness: 8%;
     text-underline-offset: 16%;

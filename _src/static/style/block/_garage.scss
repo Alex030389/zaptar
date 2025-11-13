@@ -9,26 +9,9 @@
   }
 
   &__action {
-    width: 32px;
-    height: 32px;
     position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: $gutter * 2;
-    border-radius: 4px;
-    transition: .2s;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $c-main-88;
-    }
-
-    &:hover {
-      background-color: $c-main-6;
-    }
 
     &::after {
       content: "";
@@ -107,18 +90,7 @@
   }
 
   &__card-copy {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: $gutter;
-
-    svg {
-      width: 14px;
-      height: 14px;
-      fill: $c-main-88;
-    }
   }
 
   &__card-right {
@@ -142,17 +114,5 @@
     position: absolute;
     top: 0;
     right: 0;
-
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $c-main-88;
-    }
   }
 }

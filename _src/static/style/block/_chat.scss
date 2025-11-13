@@ -104,23 +104,6 @@
     cursor: pointer;
   }
 
-  &__clip-ico {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-
-    cursor: pointer;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $c-main-88;
-    }
-  }
-
   &__closed {
     display: none;
     //display: flex;
