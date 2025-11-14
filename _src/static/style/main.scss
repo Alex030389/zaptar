@@ -7,8 +7,8 @@
 // ///////////////////////////////////////// block
 @import "block/container";
 
-@import "block/button/btn-reset";
 @import "block/button/btn";
+@import "block/button/btn-primary";
 @import "block/button/btn-light";
 
 @import "block/link/link";
@@ -38,6 +38,7 @@
 
 @import "block/scrollbar";
 @import "block/imitation-table";
+@import "block/accordion";
 
 // modals
 @import "block/modal/modal";
@@ -58,6 +59,7 @@
 @import "block/chat";
 @import "block/orders";
 @import "block/product";
+@import "block/garage";
 
 @import "block/footer/footer";
 

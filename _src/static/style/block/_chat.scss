@@ -6,13 +6,6 @@
     border-bottom: 1px solid $c-main-6;
   }
 
-  &__title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: $c-main;
-  }
-
   &__tag {
     display: flex;
     align-items: center;
@@ -109,23 +102,6 @@
     align-items: center;
     gap: $gutter * 2;
     cursor: pointer;
-  }
-
-  &__clip-ico {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-
-    cursor: pointer;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $c-main-88;
-    }
   }
 
   &__closed {

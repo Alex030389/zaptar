@@ -52,8 +52,6 @@
  }
 
   &__btn {
-    @extend .btn-reset;
-
     width: 100%;
     color: $c-main-88;
     transition: color .2s;

@@ -68,19 +68,6 @@
     }
   }
 
-  &__table-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-
-    svg {
-      width: 14px;
-      height: 14px;
-    }
-  }
-
   &__filter {
     display: grid;
     grid-auto-flow: column;

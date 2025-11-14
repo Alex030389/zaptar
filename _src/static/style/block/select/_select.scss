@@ -4,6 +4,16 @@
   position: relative;
   width: 100%;
 
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-main-45;
+
+    &--active {
+      color: $c-main-88;
+    }
+  }
+
   &__ico {
     position: absolute;
     top: 50%;
@@ -15,8 +25,10 @@
     svg {
       fill: $c-main-25;
       transition: transform .2s;
+    }
 
-      #{$self}--active & {
+    #{$self}--active &--rotate {
+      svg {
         transform: rotate(-180deg);
       }
     }

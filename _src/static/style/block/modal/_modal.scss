@@ -61,8 +61,6 @@
   }
 
   &__close {
-    @extend .btn-reset;
-
     position: absolute;
     top: 20px;
 
@@ -147,8 +145,6 @@
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
-    width: 16px;
-    height: 16px;
   }
 
   &__input {
