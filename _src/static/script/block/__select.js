@@ -8,11 +8,21 @@ if (selects.length) {
     const selectItems = select.querySelectorAll('[data-select-value]');
     const selectInput = select.querySelector('[data-select-input]');
     const isMultiple = select.hasAttribute('data-select-multiple');
+    const buttonsReset = document.querySelectorAll('[type="reset"]');
+    const selectIcons = select.querySelectorAll('[data-select-ico]');
+    const selectHasSearch = select.hasAttribute('data-select-sort');
 
     // функция для сворачивания списка
     const closeSelect = () => {
       select.classList.remove('select--active');
       selectList.classList.remove('select__list--visible');
+
+      if (selectHasSearch) {
+        Array.from(selectIcons).filter(ico => {
+          ico.classList.remove('d-none')
+          ico.nextElementSibling.classList.add('d-none')
+        })
+      }
     };
 
     // открытие/закрытие списка
@@ -24,11 +34,25 @@ if (selects.length) {
       document.querySelectorAll('[data-select].select--active').forEach(openSelect => {
         openSelect.classList.remove('select--active');
         openSelect.querySelector('[data-select-list]').classList.remove('select__list--visible');
+
+        if (selectHasSearch) {
+          Array.from(selectIcons).filter(ico => {
+            ico.classList.remove('d-none')
+            ico.nextElementSibling.classList.add('d-none')
+          })
+        }
       });
 
       if (!isActive) {
         select.classList.add('select--active');
         selectList.classList.add('select__list--visible');
+
+        if (selectHasSearch) {
+          Array.from(selectIcons).filter(ico => {
+            ico.classList.add('d-none')
+            ico.nextElementSibling.classList.remove('d-none')
+          })
+        }
       }
     });
 
@@ -45,6 +69,7 @@ if (selects.length) {
           item.classList.add('select__item--active');
 
           selectButtonText.textContent = item.textContent.trim();
+          selectButtonText.classList.add('select__text--active');
           selectInput.setAttribute('value', selectInput.value);
           closeSelect();
         } else {
@@ -80,5 +105,14 @@ if (selects.length) {
         closeSelect();
       }
     });
+    console.log(selectButtonText.dataset.selectText)
+
+    Array.from(buttonsReset).filter(btnReset =>
+      btnReset.addEventListener('click', () => {
+        selectButtonText.textContent = selectButtonText.dataset.selectText;
+        selectButtonText.classList.remove('select__text--active');
+        selectInput.value = '';
+      })
+    )
   });
 }

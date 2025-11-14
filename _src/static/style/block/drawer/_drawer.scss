@@ -115,6 +115,16 @@
     margin-bottom: $gutter * 2;
   }
 
-  &__menu {
+  &__form-content {
+    display: grid;
+    gap: $gutter * 3;
+  }
+
+  &__form-container {
+    display: grid;
+    gap: $gutter * 3;
+    background-color: $c-light;
+    border-radius: 8px;
+    padding: $gutter * 3;
   }
 }
