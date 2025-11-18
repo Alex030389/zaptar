@@ -1,0 +1,209 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+
+<main class="main">
+    <!-- //////////////////////////////////////////////////////////  -->
+    @@include('block/breadcrumb.html')
+
+    <div class="container">
+        <section class="finance">
+            <div class="section-header section-header--mb">
+                <div class="section-header__group">
+                    <h1 class="title">Мои финансы</h1>
+                </div>
+
+                <div class="section-header__group">
+                    <button type="button" class="btn-primary finance__header-btn">
+                        <svg>
+                            <use xlink:href="static/img/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                        Вывести средства
+                    </button>
+                    <button type="button" class="btn btn--size-s finance__header-btn">
+                        <svg>
+                            <use xlink:href="static/img/symbol/sprite.svg#arrow-up"></use>
+                        </svg>
+                        Пополнить баланс
+                    </button>
+                </div>
+            </div>
+            <div class="finance__info">
+                <div class="finance__left finance-block">
+                    <h2 class="finance__title">Состояние счетов</h2>
+                    <div class="finance__table-1 imitation-table">
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                Баланс клиента
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Сумма последнего зачисления
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Доступная сумма заказа
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Кредитный лимит
+                            </div>
+                        </div>
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                81,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                11,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                81,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Без ограничений
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="finance__right finance-block">
+                    <h2 class="finance__title">Информация о заказах</h2>
+                    <div class="finance__table-2 imitation-table">
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                Заказы в работе
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Возвраты в работе
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Ожидаемая отгрузка на завтра
+                            </div>
+                        </div>
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                0,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                0,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                0,00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="finance__bottom finance-block">
+                    <div class="section-header">
+                        <div class="section-header__group">
+                            <h2 class="finance__title">Операции</h2>
+                        </div>
+
+                        <div class="section-header__group">
+                            <div class="finance__select-wrapper">
+                                <label for="filter-finance">Фильтр:</label>
+                                @@include('block/select.html', {
+                                "id": "filter-finance",
+                                "text": "За последние 12 месяцев",
+                                "option1": { "title": "За последние 12 месяцев", "value": "year" },
+                                "option2": { "title": "За последние 3 месяца", "value": "month-3" },
+                                "option3": { "title": "За последние 7 дней", "value": "week" },
+                                "class": "finance__select",
+                                })
+                            </div>
+                            <button type="button" class="btn-light btn-light--size-l">
+                                <svg class="btn-light__ico">
+                                    <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="finance__table-3 imitation-table">
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                Дата
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Оплата
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Отгружено
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Сальдо
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Документ
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Комментарий
+                            </div>
+                        </div>
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                26.11.2024 19:11:00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                11,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                -
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                81,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                -
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Аванс (Эквайринг)
+                            </div>
+                        </div>
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                26.11.2024 19:11:00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                156,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                -
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                70,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                -
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Возврат OSRAM 7506 кол-во 1 шт. лампа накаливания из заказа №7138367
+                            </div>
+                        </div>
+                        <div class="finance__table-row imitation-table__table-row">
+                            <div class="imitation-table__table-cell">
+                                26.11.2024 19:11:00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                -
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                156,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                -86,00
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                <button type="button" class="btn-light">
+                                    <svg class="btn-light__ico">
+                                        <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="imitation-table__table-cell">
+                                Выдача
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')
