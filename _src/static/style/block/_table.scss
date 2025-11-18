@@ -30,7 +30,7 @@
 
   th,
   &__floating-table-row:first-child {
-    color: $c-main-45;
+    color: $c-main-65;
     background-color: $c-light;
   }
 
@@ -66,9 +66,9 @@
     right: 0;
     background-color: #fff;
     box-shadow: -8px 0px 5px -5px rgba(0, 0, 0, 0.12);
+
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
-}
-
-.table-filter {
-
 }

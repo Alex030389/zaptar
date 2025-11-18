@@ -4,8 +4,8 @@
 <main class="main">
     @@include('block/breadcrumb.html')
 
-    <div class="container">
-        <section class="orders">
+    <section class="orders">
+        <div class="container">
             <div class="section-header section-header--mb">
                 <h1 class="title">Заказы</h1>
 
@@ -1131,8 +1131,34 @@
                     </table>
                 </div>
             </div>
-        </section>
-    </div>
+
+            <div class="orders__bottom orders-bottom">
+                <div class="orders-bottom__actions">
+                    <!-- <button type="button" disabled class="btn-text" href="#"> -->
+                    <!--     Товар не выбран -->
+                    <!-- </button> -->
+                    <button type="button" class="btn-text btn-text--theme-danger">
+                        В архив
+                    </button>
+                    <button type="button" class="btn-text btn-text--theme-default">
+                        Изменить пункт самовывоза
+                    </button>
+                </div>
+
+                <div class="orders-bottom__info">
+                    Выбрано 10 товаров на сумму 13 255,00 руб
+                </div>
+
+                <div class="orders-bottom__pagination">
+                    @@include('block/pagination.html')
+                </div>
+            </div>
+
+            <div class="orders__footer">
+                footer
+            </div>
+        </div>
+    </section>
 </main>
 
 @@include('block/footer/footer.html')
