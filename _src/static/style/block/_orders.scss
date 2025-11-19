@@ -12,6 +12,10 @@
   &__summary {
     margin-top: $gutter * 12;
     table-layout: fixed;
+
+    @media (max-width: $lg) {
+      margin-top: $gutter * 6;
+    }
   }
 }
 
@@ -39,7 +43,7 @@
   }
 
   &__info {
-    color: $c-main-45;
+    color: $c-main-65;
     text-align: center;
   }
 
