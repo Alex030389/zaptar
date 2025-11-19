@@ -1,4 +1,8 @@
+//Todo: нужно состояние disabled
+
 .btn-primary {
+  $self: &;
+
   background-color: #fff;
   border: 1px solid $c-main-25;
   border-radius: 6px;
@@ -14,12 +18,19 @@
   line-height: 22px;
   color: $c-main-88;
 
-  &:hover,
-  &:active {
+  &:not(#{$self}--disabled):not(:disabled):is(:hover, :active) {
     border: 1px solid $c-main-45;
+  }
+
+  &:disabled,
+  &--disabled {
+    border: 1px solid #D9D9D9;
+    background-color: #0000000A;
+    color: $c-main-45;
   }
 
   @media (max-width: $md) {
     padding: $gutter;
   }
 }
+

@@ -10,7 +10,6 @@ if (selects.length) {
     const hasMultiple = select.hasAttribute('data-select-multiple');
     const hasSearch = select.hasAttribute('data-select-sort');
     const search = select.querySelector('[data-select-search]');
-    const icons = [...select.querySelectorAll('[data-select-ico]')];
     const resetButtons = [...document.querySelectorAll('[type="reset"]')];
 
     let lastHovered = null;

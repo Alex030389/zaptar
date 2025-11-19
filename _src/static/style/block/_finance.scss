@@ -106,13 +106,15 @@
   }
 
   &__select {
-    min-width: 352px;
+    width: 352px;
+    max-width: 100%;
 
     @media (max-width: $md) {
       min-width: 240px;
+      max-width: 170px;
     }
 
-    @media (max-width: $sm) {
+    @media (max-width: $xs) {
       min-width: auto;
     }
   }
