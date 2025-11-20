@@ -106,13 +106,15 @@
   }
 
   &__select {
-    min-width: 352px;
+    width: 352px;
+    max-width: 100%;
 
     @media (max-width: $md) {
       min-width: 240px;
+      max-width: 170px;
     }
 
-    @media (max-width: $sm) {
+    @media (max-width: $xs) {
       min-width: auto;
     }
   }
@@ -161,10 +163,13 @@
         "payment comment"
         "shipped document"
         "balance document";
-      border-bottom: 1px solid $c-gray;
       padding-top: $gutter * 2;
       padding-bottom: $gutter * 3;
       grid-template-rows: auto;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $c-gray;
+      }
     }
 
     @media (max-width: $sm) {
