@@ -14,16 +14,21 @@
                     <div class="drawer__wrapper-input">
                         <label for="order-issue-date">Дата оформления</label>
                         @@include('../select.html', {
-                        "id": "order-issue-date",
-                        "text": "Сегодня",
-                        "option1": { "title": "Сегодня", "value": "today" },
-                        "option2": { "title": "За последние 7 дней", "value": "7-days" },
-                        "option3": { "title": "За последние 30 дней", "value": "30-days" },
-                        "option4": { "title": "За этот месяц", "value": "month" },
-                        "option5": { "title": "Предыдущий месяц", "value": "prew-month" },
-                        "option6": { "title": "За последние 12 месяцев", "value": "12-month" },
-                        "option7": { "title": "Выбрать дни", "value": "days" },
+                            "id": "order-issue-date",
+                            "text": "Сегодня",
+                            "option1": { "title": "Сегодня", "value": "today" },
+                            "option2": { "title": "За последние 7 дней", "value": "7-days" },
+                            "option3": { "title": "Выбрать дни", "value": "choose-days" },
+                            "classItem": "select__item--selected",
+                            "dataItem": "data-last-item",
                         })
+                    </div>
+
+                    <div class="drawer__wrapper-input d-none" data-datepicker>
+                        <span class="form__label">Диапазон дней</span>
+                        <div class="form-date-range">
+                            <input class="form-input flatpickr flatpickr-input" type="text" id="order-date" placeholder="Выберите диапазон дней"/>
+                        </div>
                     </div>
                     <div class="drawer__wrapper-input">
                         <label for="order-article" class="form__label">
@@ -46,23 +51,20 @@
                     <div class="drawer__wrapper-input">
                         <label for="order-pick-up">Пункт самовывоза</label>
                         @@include('../select.html', {
-                        "id": "order-pick-up",
-                        "text": "Сегодня",
-                        "option1": { "title": "Сегодня", "value": "today" },
-                        "option2": { "title": "За последние 7 дней", "value": "7-days" },
-                        "option3": { "title": "За последние 30 дней", "value": "30-days" },
-                        "option4": { "title": "За этот месяц", "value": "month" },
-                        "option5": { "title": "Предыдущий месяц", "value": "prew-month" },
-                        "option6": { "title": "За последние 12 месяцев", "value": "12-month" },
-                        "option7": { "title": "Выбрать дни", "value": "days" },
+                            "id": "order-pick-up",
+                            "text": "ул. Луначарского, д.202, строение 1, корпус 4, офис 1005",
+                            "option1": { "title": " ул. Луначарского, д.202, строение 1, корпус 4, офис 1005", "value": "first-address" },
+                            "option2": { "title": "ул. Встроченко, д. 1 (офис 405)", "value": "second-address" },
+                            "option3": { "title": "ул. Клары-Цеткин, д. 25 (офис 1004)", "value": "third-address" },
+                            "classItem": "select__item--selected",
                         })
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="submit" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary">
                         Сбросить
                     </button>
-                    <button type="reset" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
                         Применить
                     </button>
                 </div>
