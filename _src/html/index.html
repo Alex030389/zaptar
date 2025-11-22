@@ -40,7 +40,13 @@
             <a href="product.html">Информация о товаре</a>
         </li>
         <li>
-            Текстовые страницы
+            <a href="privacy-policy.html">Политика конфиденциальности</a>
+        </li>
+        <li>
+            <a href="agreement.html">Договор оферты</a>
+        </li>
+        <li>
+            <a href="payment.html">Способы оплаты</a>
         </li>
     </ol>
 
@@ -51,6 +57,9 @@
     <ol>
         <li>
             <button data-modal="modal-auth">Авторизация</button>
+        </li>
+        <li>
+            <button data-modal="modal-add-comment">Добавление комментария (стр Гараж)</button>
         </li>
         <li>
             <button data-modal="drawer-catalog">Дравер Меню</button>
@@ -65,34 +74,43 @@
             <button data-modal="drawer-profile-edit">Дравер Редактирование профиля</button>
         </li>
         <li>
-            <button data-modal="drawer-add-theme">Дравер Добавление темы</button>
+            <button data-modal="drawer-add-theme">Дравер Добавление темы (стр Чат)</button>
         </li>
         <li>
-            <button data-modal="drawer-filter-messages">Дравер Фильтр сообщений</button>
+            <button data-modal="drawer-filter-messages">Дравер Фильтр сообщений (стр Чат)</button>
         </li>
         <li>
-            <button data-modal="drawer-add-car">Дравер Добавление авто</button>
+            <button data-modal="drawer-add-car">Дравер Добавление авто  (стр Гараж)</button>
         </li>
         <li>
-            <button data-modal="drawer-edit-car">Дравер Редактирование авто</button>
+            <button data-modal="drawer-edit-car">Дравер Редактирование авто (стр Гараж)</button>
         </li>
         <li>
-            <button data-modal="drawer-recharge">Дравер Пополнение баланса</button>
+            <button data-modal="drawer-recharge">Дравер Пополнение баланса (стр Мои финансы)</button>
         </li>
         <li>
-            <button data-modal="drawer-deduce">Дравер Запрос на вывод средств</button>
+            <button data-modal="drawer-deduce">Дравер Запрос на вывод средств (стр Мои финансы)</button>
+        </li>
+        <li>
+            <button data-modal="drawer-filter-orders">Дравер Фильтр (стр Заказы)</button>
         </li>
         <li>
             <button data-notification="notification">Нотификация</button>
         </li>
         <li>
-            <button data-notification="notification-deduce">Нотификация Вывод средств</button>
+            <button data-notification="notification-deduce">Нотификация Вывод средств (стр Мои финансы)</button>
+        </li>
+        <li>
+            <button data-notification="notification-add-comment">Нотификация Комментарий успешно добавлен (стр Гараж)</button>
+        </li>
+        <li>
+            <button data-notification="notification-delete-product">Нотификация Товар успешно удален (стр Гараж)</button>
         </li>
     </ol>
 
 </main>
 
-@@include('block/modal/modal.html')
+@@include('block/modal/modal-template.html')
 @@include('block/drawer/drawer-template.html')
 @@include('block/notification/notification-template.html')
 @@include('block/scripts.html')

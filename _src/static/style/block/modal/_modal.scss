@@ -179,13 +179,15 @@
   }
 
   &__footer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
-  }
+    gap: $gutter;
 
-  &__btn {
-    margin-bottom: $gutter;
+    &--row {
+      grid-auto-flow: column;
+      justify-self: end;
+      gap: $gutter * 4;
+    }
   }
 
   &__link {
@@ -193,6 +195,7 @@
     line-height: 20px;
     color: $c-accent;
     transition: color .2s;
+    justify-self: center;
 
     &:hover {
       color: $c-accent-dark;

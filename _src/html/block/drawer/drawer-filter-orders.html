@@ -1,0 +1,72 @@
+<div id="drawer-filter-orders" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4 title-4--mb">Фильтр</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="order-issue-date">Дата оформления</label>
+                        @@include('../select.html', {
+                        "id": "order-issue-date",
+                        "text": "Сегодня",
+                        "option1": { "title": "Сегодня", "value": "today" },
+                        "option2": { "title": "За последние 7 дней", "value": "7-days" },
+                        "option3": { "title": "За последние 30 дней", "value": "30-days" },
+                        "option4": { "title": "За этот месяц", "value": "month" },
+                        "option5": { "title": "Предыдущий месяц", "value": "prew-month" },
+                        "option6": { "title": "За последние 12 месяцев", "value": "12-month" },
+                        "option7": { "title": "Выбрать дни", "value": "days" },
+                        })
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-article" class="form__label">
+                            Артикул
+                        </label>
+                        <input type="text" class="form-input" id="order-article" placeholder="Введите номер" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-brand" class="form__label">
+                            Бренд
+                        </label>
+                        <input type="text" class="form-input" id="order-brand" placeholder="Введите наименование" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-number" class="form__label">
+                            Номер заказа
+                        </label>
+                        <input type="text" class="form-input" id="order-number" placeholder="Введите номер" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-pick-up">Пункт самовывоза</label>
+                        @@include('../select.html', {
+                        "id": "order-pick-up",
+                        "text": "Сегодня",
+                        "option1": { "title": "Сегодня", "value": "today" },
+                        "option2": { "title": "За последние 7 дней", "value": "7-days" },
+                        "option3": { "title": "За последние 30 дней", "value": "30-days" },
+                        "option4": { "title": "За этот месяц", "value": "month" },
+                        "option5": { "title": "Предыдущий месяц", "value": "prew-month" },
+                        "option6": { "title": "За последние 12 месяцев", "value": "12-month" },
+                        "option7": { "title": "Выбрать дни", "value": "days" },
+                        })
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="submit" class="drawer__footer-btn btn-primary">
+                        Сбросить
+                    </button>
+                    <button type="reset" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                        Применить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
