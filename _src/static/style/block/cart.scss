@@ -1,0 +1,6 @@
+.cart {
+  --table-cell-last-width: 176px;
+  &__alert {
+    margin-bottom: $gutter * 8;
+  }
+}
