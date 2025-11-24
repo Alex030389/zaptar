@@ -76,14 +76,6 @@
                                 Количество
                             </th>
                             <th>
-                                <!-- todo: кнопка фильтра цены. Нужно узнать как будет выглядеть выпадашка -->
-                                <!-- <button type="button" class="table-filter-btn"> -->
-                                <!--     Цена -->
-                                <!--     <svg class="table-filter-btn__ico" aria-hidden="true"> -->
-                                <!--         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use> -->
-                                <!--     </svg> -->
-                                <!-- </button> -->
-
                                 <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Цена
@@ -96,7 +88,7 @@
                                     </div>
 
                                     <div class="table-dropdown__content">
-                                    <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
+                                    <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
                             </th>
@@ -117,7 +109,7 @@
                                     </div>
 
                                     <div class="table-dropdown__content">
-                                        <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
+                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
                             </th>
@@ -1162,8 +1154,8 @@
                 </div>
             </div>
 
-            <div class="orders__footer orders-footer">
-                <div class="orders-footer__actions">
+            <div class="table-footer">
+                <div class="table-footer__actions">
                     <button type="button" disabled class="btn-text" data-not-checked-product>
                         Товар не выбран
                     </button>
@@ -1176,11 +1168,11 @@
                     </button>
                 </div>
 
-                <div class="orders-footer__info d-none" data-checked-product>
-                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total>13 255,00</span> руб
+                <div class="table-footer__info d-none" data-checked-product>
+                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
                 </div>
 
-                <div class="orders-footer__pagination">
+                <div class="table-footer__pagination">
                     @@include('block/pagination.html')
                 </div>
             </div>
