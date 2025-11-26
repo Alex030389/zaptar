@@ -1,0 +1,144 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+
+<main class="main">
+    <!-- //////////////////////////////////////////////////////////  -->
+    @@include('block/breadcrumb.html')
+
+    <div class="container">
+        <section class="details">
+            <div class="section-header section-header--mb">
+                <div class="section-header__group">
+                    <h1 class="title">Abarth CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</h1>
+                </div>
+
+                <div class="section-header__group">
+                    <a href="#" class="btn-primary">
+                       Назад
+                    </a>
+                </div>
+            </div>
+            <div class="details__wrapper">
+                <div class="details__sidebar">
+                    <div class="tabs-2">
+                        <div class="tabs-2__box-btn">
+                            <button class="tabs-2__btn tabs-2__btn--active" tab-2="1">Поиск по каталогу</button>
+                            <button class="tabs-2__btn" tab-2="2">Поиск по узлам</button>
+                        </div>
+
+                        <div class="tabs-2__box-content">
+                            <div class="tabs-2__content tabs-2__content--active" tab-2-content="1">
+                                <div class="details__tree">
+                                    <div class="details__search">
+                                        <input class="details__search-input" type="text" tabindex="0" placeholder="Поиск по списку категорий" />
+                                        <button type="button" class="btn-light btn-light--size-l details__search-btn">
+                                            <svg aria-hidden="true" class="btn-light__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="details__list">
+                                        <li class="details__item details__item--open">
+                                            <div class="details__group">
+                                                <button type="button" class="btn-light">
+                                                    <svg aria-hidden="true" class="btn-light__ico">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                    Детали для ТО
+                                                </span>
+                                            </div>
+                                            <ul class="details__sublist">
+                                                <li class="details__subitem">Фильтр масляный</li>
+                                                <li class="details__subitem">Фильтр воздушный</li>
+                                                <li class="details__subitem">Фильтр салонный</li>
+                                            </ul>
+                                        </li>
+                                        <li class="details__item">
+                                            <div class="details__group">
+                                                <button type="button" class="btn-light">
+                                                    <svg aria-hidden="true" class="btn-light__ico">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                    Двигатель
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="details__item">
+                                            <div class="details__group">
+                                                <button type="button" class="btn-light">
+                                                    <svg aria-hidden="true" class="btn-light__ico">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                    Топливная система
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="details__item details__item--open">
+                                            <div class="details__group">
+                                                <button type="button" class="btn-light">
+                                                    <svg aria-hidden="true" class="btn-light__ico">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                    Система охлаждения
+                                                </span>
+                                            </div>
+                                            <ul class="details__list">
+                                                <li class="details__item">
+                                                    <div class="details__group">
+                                                        <button type="button" class="btn-light">
+                                                            <svg aria-hidden="true" class="btn-light__ico">
+                                                                <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                    </div>
+                                                    <ul class="details__sublist">
+                                                        <li class="details__subitem">Фильтр масляный</li>
+                                                        <li class="details__subitem">Фильтр воздушный</li>
+                                                        <li class="details__subitem">Фильтр салонный</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="details__item">
+                                                    <div class="details__group">
+                                                        <button type="button" class="btn-light">
+                                                            <svg aria-hidden="true" class="btn-light__ico">
+                                                                <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div >
+                            <div class="tabs-2__content" tab-2-content="2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details__main">
+
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')
