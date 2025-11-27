@@ -137,12 +137,12 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-light" data-tippy-content="Создать обсуждение">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
+                                    <button aria-label="информация по заказу" class="btn-light" data-tippy-content="Информация по заказу">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
@@ -155,7 +155,7 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                <a href="#" class="link link--blue" data-tippy-content="Найти деталь osram 85126">85126</a>
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -167,7 +167,7 @@
                             </td>
                             <td>
                                 <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard" data-tippy-with-code-content>
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -175,7 +175,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn" data-tippy-content="Дистрибьютер">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -209,7 +209,7 @@
                             <td>
                                 <!-- Статус -->
                                 <div class="status status--type-left status--rejected">
-                                  Отказ в возврате
+                                    Отказ в возврате
                                 </div>
                             </td>
                             <td>
@@ -270,7 +270,7 @@
                             </td>
                             <td>
                                 <!-- Возврат -->
-                                <button aria-label="информация возврата товаров" class="status-return status-return--special">
+                                <button aria-label="информация возврата товаров" class="status-return status-return--special" data-tippy-content="Возврат возможен при браке, пересорте, недостающих или поврежденных деталях, а также для б/у товаров. По другим причинам — на усмотрение поставщика. Заказы с длительной доставкой (более 7 дней) не подлежат возврату. Рекламации принимаются в течение 7 дней после отгрузки. Не принимаются к возврату: масло, жидкости, электродетали и товары до 1000 руб. Возврат с зарубежных складов невозможен.">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -1160,10 +1160,10 @@
                         Товар не выбран
                     </button>
 
-                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
+                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="196">
                         В архив
                     </button>
-                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address">
+                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address" data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="154">
                         Изменить пункт самовывоза
                     </button>
                 </div>
