@@ -206,6 +206,20 @@
     }
   }
 
+  &__link {
+    height: auto;
+    display: inline-block;
+    width: 100%;
+    border-radius: 6px;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    &--active,
+    &:hover {
+      background-color: $c-accent-light;
+    }
+  }
+
   &__nodes {
     border: 1px solid $c-main-6;
     border-radius: 8px;
@@ -214,7 +228,7 @@
   }
 
   &__scrollbar {
-    max-height: 448px;
+    max-height: 420px;
   }
 
   &__nodes-list {
