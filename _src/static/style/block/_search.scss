@@ -5,7 +5,7 @@
     gap: $gutter * 6;
     align-items: start;
 
-    @media (max-width: $lg) {
+    @media (max-width: $xl) {
       grid-template-columns: 1fr;
     }
   }
