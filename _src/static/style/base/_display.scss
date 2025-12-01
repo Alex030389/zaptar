@@ -7,17 +7,11 @@
     display: block;
   }
 
-  .d-xl-none {
-    display: none;
-  }
-}
-
-@media (max-width: $lg) {
-  .d-lg-grid {
+  .d-xl-grid {
     display: grid;
   }
 
-  .d-lg-none {
+  .d-xl-none {
     display: none;
   }
 }
