@@ -3,18 +3,22 @@ const dropdowns = document.querySelectorAll('[data-dropdown]');
 if (dropdowns.length) {
   dropdowns.forEach(dropdown => {
     const dropdownBtns = dropdown.querySelectorAll('[data-dropdown-btn]');
-    const dropdownItems = dropdown.querySelectorAll('[data-dropdown-item]');
+    const dropdownItems = document.querySelectorAll('[data-dropdown-item]');
 
     dropdownBtns.forEach((btn, index) => {
       btn.addEventListener('click', () => {
-        dropdownItems[index].classList.toggle('table-dropdown__content--visible');
+        const elem = dropdown.getBoundingClientRect();
+
+        dropdownItems[index].style.left = elem.left - 180 + 'px';
+        dropdownItems[index].style.top = elem.bottom  +'px';
+        dropdownItems[index].classList.toggle('dropdown--visible');
       })
     })
 
 
     // закрытие при клике вне селекта
     document.addEventListener('click', e => {
-      if (!dropdown.contains(e.target)) dropdownItems.forEach(item => item.classList.remove('table-dropdown__content--visible'));
+      if (!dropdown.contains(e.target)) dropdownItems.forEach(item => item.classList.remove('dropdown--visible'));
     });
   })
 }

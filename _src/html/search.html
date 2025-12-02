@@ -109,18 +109,14 @@
                                         </div>
                                     </th>
                                     <th>
-                                        <div class="table-dropdown">
+                                        <div class="table-dropdown" data-dropdown>
                                             <div class="table-dropdown__inner">
                                                 Цена
-                                                <button type="button" class="table-dropdown__trigger btn-light">
+                                                <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn>
                                                     <svg class="btn-light__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                                     </svg>
                                                 </button>
-                                            </div>
-
-                                            <div class="table-dropdown__content">
-                                                <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
                                             </div>
                                         </div>
                                     </th>
@@ -917,5 +913,6 @@
     </section>
 </main>
 
+@@include('block/dropdown/dropdown.html')
 @@include('block/footer/footer.html')
 @@include('block/scripts.html')
