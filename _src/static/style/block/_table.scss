@@ -81,6 +81,7 @@
     right: -1px;
     background-color: #fff;
     box-shadow: -8px 0px 5px -5px rgba(0, 0, 0, 0.12);
+    z-index: 10;
 
     @media (max-width: $sm) {
       display: none;

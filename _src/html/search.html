@@ -112,7 +112,7 @@
                                         <div class="table-dropdown" data-dropdown>
                                             <div class="table-dropdown__inner">
                                                 Цена
-                                                <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn>
+                                                <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="1">
                                                     <svg class="btn-light__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                                     </svg>
@@ -198,14 +198,14 @@
                                                 </svg>
                                             </button>
 
-                                            <label class="search__form-number form-number" data-form-number>
+                                            <label class="search__form-number form-number test" data-form-number="1">
                                                 <input class="form-number__input form-input" type="number" value="10">
-                                                <button type="button" class="form-number__increment">
+                                                <button type="button" class="form-number__increment" data-increment>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                                     </svg>
                                                 </button>
-                                                <button type="button" class="form-number__decrement">
+                                                <button type="button" class="form-number__decrement" data-decrement>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                                     </svg>
@@ -294,14 +294,14 @@
                                                 </svg>
                                             </button>
 
-                                            <label class="search__form-number form-number" data-form-number>
+                                            <label class="search__form-number form-number" data-form-number="2">
                                                 <input class="form-number__input form-input" type="number" value="1">
-                                                <button type="button" class="form-number__increment">
+                                                <button type="button" class="form-number__increment" data-increment>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                                     </svg>
                                                 </button>
-                                                <button type="button" class="form-number__decrement">
+                                                <button type="button" class="form-number__decrement" data-decrement>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                                     </svg>
@@ -385,15 +385,11 @@
                                         <div class="table-dropdown">
                                             <div class="table-dropdown__inner">
                                                 Цена
-                                                <button type="button" class="table-dropdown__trigger btn-light">
+                                                <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="2">
                                                     <svg class="btn-light__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                                     </svg>
                                                 </button>
-                                            </div>
-
-                                            <div class="table-dropdown__content">
-                                                <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
                                             </div>
                                         </div>
                                     </th>
@@ -475,14 +471,14 @@
                                                 </svg>
                                             </button>
 
-                                            <label class="search__form-number form-number" data-form-number>
+                                            <label class="search__form-number form-number" data-form-number="3">
                                                 <input class="form-number__input form-input" type="number" value="10">
-                                                <button type="button" class="form-number__increment">
+                                                <button type="button" class="form-number__increment" data-increment>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                                     </svg>
                                                 </button>
-                                                <button type="button" class="form-number__decrement">
+                                                <button type="button" class="form-number__decrement" data-decrement>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                                     </svg>
@@ -571,14 +567,206 @@
                                                 </svg>
                                             </button>
 
-                                            <label class="search__form-number form-number" data-form-number>
+                                            <label class="search__form-number form-number" data-form-number="4">
                                                 <input class="form-number__input form-input" type="number" value="1">
-                                                <button type="button" class="form-number__increment">
+                                                <button type="button" class="form-number__increment" data-increment>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                                     </svg>
                                                 </button>
-                                                <button type="button" class="form-number__decrement">
+                                                <button type="button" class="form-number__decrement" data-decrement>
+                                                    <svg class="form-number__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </label>
+
+                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
+                                                <svg class="btn-light__ico" aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <!-- Бренд / Артикул -->
+                                        <div class="table-cel-info">
+                                            OSMAR<br> 7506
+                                            <svg aria-hidden="true" class="table-cel-info__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- Картинка -->
+                                        <button type="button" class="table-btn">
+                                            <svg aria-hidden="true" class="table-btn__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#picture"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!-- Наименование -->
+                                        лампа 12 v 21 w стопсигнал повторитель 1-конт (ba 15) (o ram)
+                                    </td>
+                                    <td>
+                                        <!-- Поставщик / Склад -->
+                                        TMNR
+                                    </td>
+                                    <td class="table__cell-slim table__cell-narrow">
+                                        <!-- Возврат -->
+                                        <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!--  Дистрибьютер -->
+                                        <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!-- Наличие -->
+                                        >&nbsp;1000
+                                    </td>
+                                    <td class="table__cell-slim table__cell-narrow">
+                                        <!-- Статус -->
+                                        <div class="status status--alone status--type-left status--rejected">
+                                        </div>
+                                    </td>
+                                    <td class="nowrap">
+                                        <!-- Срок -->
+                                        1 день<br>
+                                        (до 13:20)
+                                    </td>
+                                    <td>
+                                        <!-- Ожидаемая дата доставки -->
+                                        04.07 Чт
+                                    </td>
+                                    <td class="nowrap">
+                                        <!-- Цена -->
+                                        1 427,00
+                                    </td>
+                                    <td>
+                                        <!-- Купить -->
+                                        <div class="table__actions">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
+                                                <svg class="btn-light__ico" aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                                                </svg>
+                                            </button>
+
+                                            <label class="search__form-number form-number" data-form-number="5">
+                                                <input class="form-number__input form-input" type="number" value="1">
+                                                <button type="button" class="form-number__increment" data-increment>
+                                                    <svg class="form-number__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" class="form-number__decrement" data-decrement>
+                                                    <svg class="form-number__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </label>
+
+                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
+                                                <svg class="btn-light__ico" aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <!-- Бренд / Артикул -->
+                                        <div class="table-cel-info">
+                                            OSMAR<br> 7506
+                                            <svg aria-hidden="true" class="table-cel-info__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- Картинка -->
+                                        <button type="button" class="table-btn">
+                                            <svg aria-hidden="true" class="table-btn__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#picture"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!-- Наименование -->
+                                        лампа 12 v 21 w стопсигнал повторитель 1-конт (ba 15) (o ram)
+                                    </td>
+                                    <td>
+                                        <!-- Поставщик / Склад -->
+                                        TMNR
+                                    </td>
+                                    <td class="table__cell-slim table__cell-narrow">
+                                        <!-- Возврат -->
+                                        <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!--  Дистрибьютер -->
+                                        <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!-- Наличие -->
+                                        >&nbsp;1000
+                                    </td>
+                                    <td class="table__cell-slim table__cell-narrow">
+                                        <!-- Статус -->
+                                        <div class="status status--alone status--type-left status--rejected">
+                                        </div>
+                                    </td>
+                                    <td class="nowrap">
+                                        <!-- Срок -->
+                                        1 день<br>
+                                        (до 13:20)
+                                    </td>
+                                    <td>
+                                        <!-- Ожидаемая дата доставки -->
+                                        04.07 Чт
+                                    </td>
+                                    <td class="nowrap">
+                                        <!-- Цена -->
+                                        1 427,00
+                                    </td>
+                                    <td>
+                                        <!-- Купить -->
+                                        <div class="table__actions">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
+                                                <svg class="btn-light__ico" aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                                                </svg>
+                                            </button>
+
+                                            <label class="search__form-number form-number" data-form-number="6">
+                                                <input class="form-number__input form-input" type="number" value="1">
+                                                <button type="button" class="form-number__increment" data-increment>
+                                                    <svg class="form-number__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" class="form-number__decrement" data-decrement>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                                     </svg>
@@ -656,14 +844,14 @@
                                     </svg>
                                 </button>
 
-                                <label class="search__form-number form-number" data-form-number>
+                                <label class="search__form-number form-number" data-form-number="7">
                                     <input class="form-number__input form-input" type="number" value="1">
-                                    <button type="button" class="form-number__increment">
+                                    <button type="button" class="form-number__increment" data-increment>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                         </svg>
                                     </button>
-                                    <button type="button" class="form-number__decrement">
+                                    <button type="button" class="form-number__decrement" data-decrement>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                         </svg>
@@ -724,14 +912,14 @@
                                     </svg>
                                 </button>
 
-                                <label class="search__form-number form-number" data-form-number>
+                                <label class="search__form-number form-number" data-form-number="8">
                                     <input class="form-number__input form-input" type="number" value="1">
-                                    <button type="button" class="form-number__increment">
+                                    <button type="button" class="form-number__increment" data-increment>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                         </svg>
                                     </button>
-                                    <button type="button" class="form-number__decrement">
+                                    <button type="button" class="form-number__decrement" data-decrement>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                         </svg>
@@ -808,14 +996,14 @@
                                     </svg>
                                 </button>
 
-                                <label class="search__form-number form-number" data-form-number>
+                                <label class="search__form-number form-number" data-form-number="9">
                                     <input class="form-number__input form-input" type="number" value="1">
-                                    <button type="button" class="form-number__increment">
+                                    <button type="button" class="form-number__increment" data-increment>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                         </svg>
                                     </button>
-                                    <button type="button" class="form-number__decrement">
+                                    <button type="button" class="form-number__decrement" data-decrement>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                         </svg>
@@ -876,14 +1064,14 @@
                                     </svg>
                                 </button>
 
-                                <label class="search__form-number form-number" data-form-number>
+                                <label class="search__form-number form-number" data-form-number="10">
                                     <input class="form-number__input form-input" type="number" value="1">
-                                    <button type="button" class="form-number__increment">
+                                    <button type="button" class="form-number__increment" data-increment>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
                                         </svg>
                                     </button>
-                                    <button type="button" class="form-number__decrement">
+                                    <button type="button" class="form-number__decrement" data-decrement>
                                         <svg class="form-number__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                         </svg>
@@ -913,6 +1101,27 @@
     </section>
 </main>
 
-@@include('block/dropdown/dropdown.html')
+@@include('block/dropdown/dropdown.html', {
+    "id": "1",
+    "text": "Выберите цену",
+    "idSelect": "price-1",
+    "optionTitle1": "Наценка (10,00)",
+    "optionValue1": "1",
+    "optionTitle2": "Наценка (20,00)",
+    "optionValue2": "2",
+    "optionTitle3": "Без наценки",
+    "optionValue3": "3",
+})
+@@include('block/dropdown/dropdown.html', {
+    "id": "2",
+    "text": "Выберите цену",
+    "idSelect": "price-2",
+    "optionTitle1": "Наценка (10,00)",
+    "optionValue1": "1",
+    "optionTitle2": "Наценка (20,00)",
+    "optionValue2": "2",
+    "optionTitle3": "Без наценки",
+    "optionValue3": "3",
+})
 @@include('block/footer/footer.html')
 @@include('block/scripts.html')

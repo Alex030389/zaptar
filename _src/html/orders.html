@@ -76,35 +76,15 @@
                                 Количество
                             </th>
                             <th>
-                                <div class="table-dropdown" data-dropdown>
+                                <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Цена
 
-                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn>
+                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="1">
                                             <svg class="btn-light__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
                                         </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content" data-dropdown-item>
-                                        <div class="table-dropdown__select">
-                                            @@include('block/select.html', {
-                                            "id": "price",
-                                            "text": "Выберите цену",
-                                            "option1": { "title": "Наценка (10,00)", "value": "1" },
-                                            "option2": { "title": "Наценка (20,00)", "value": "2" },
-                                            "option3": { "title": "Без наценки", "value": "3" },
-                                            })
-                                        </div>
-                                        <div class="table-dropdown__actions">
-                                            <button type="reset" class="btn-text" disabled data-reset-select="price">
-                                                Сброс
-                                            </button>
-                                            <button type="submit" class="btn btn--size-xs">
-                                                Применить
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </th>
@@ -112,35 +92,15 @@
                                 Сумма
                             </th>
                             <th>
-                                <div class="table-dropdown" data-dropdown>
+                                <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Статус
 
-                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn>
+                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="2">
                                             <svg class="btn-light__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
                                         </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content" data-dropdown-item>
-                                        <div class="table-dropdown__select">
-                                            @@include('block/select.html', {
-                                                "id": "status",
-                                                "text": "Выберите статус",
-                                                "option1": { "title": "В обработке", "value": "1" },
-                                                "option2": { "title": "Возврат проведен", "value": "2" },
-                                                "option3": { "title": "В разборе", "value": "3" },
-                                            })
-                                        </div>
-                                        <div class="table-dropdown__actions">
-                                           <button type="reset" class="btn-text" disabled data-reset-select="status">
-                                               Сброс
-                                           </button>
-                                            <button type="submit" class="btn btn--size-xs">
-                                                Применить
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </th>
@@ -1556,5 +1516,27 @@
     </section>
 </main>
 
+@@include('block/dropdown/dropdown.html', {
+    "id": "1",
+    "text": "Выберите цену",
+    "idSelect": "price",
+    "optionTitle1": "Наценка (10,00)",
+    "optionValue1": "1",
+    "optionTitle2": "Наценка (20,00)",
+    "optionValue2": "2",
+    "optionTitle3": "Без наценки",
+    "optionValue3": "3",
+})
+@@include('block/dropdown/dropdown.html', {
+    "id": "2",
+    "text": "Выберите статус",
+    "idSelect": "status",
+    "optionTitle1": "В обработке",
+    "optionValue1": "1",
+    "optionTitle2": "Возврат проведен",
+    "optionValue2": "2",
+    "optionTitle3": "В разборе",
+    "optionValue3": "3",
+})
 @@include('block/footer/footer.html')
 @@include('block/scripts.html')

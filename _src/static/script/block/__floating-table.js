@@ -2,8 +2,8 @@ const tables = document.querySelectorAll('[data-table]');
 
 if(tables.length) {
     tables.forEach(table => {
-        const container = document.querySelector('[data-table-scrollbar]');
-        const inner = document.querySelector('[data-table-inner]');
+        const container = table.querySelector('[data-table-scrollbar]');
+        const inner = table.querySelector('[data-table-inner]');
 
         let floatingTable = null;
 
