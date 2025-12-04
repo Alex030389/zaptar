@@ -6,7 +6,6 @@
 @@include('block/__modal.js')
 @@include('block/__input-file.js')
 @@include('block/__notification.js')
-@@include('block/__anchor-smooth.js')
 @@include('block/__accordion.js')
 @@include('block/__form-number.js')
 @@include('block/__floating-table.js')
