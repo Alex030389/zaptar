@@ -53,16 +53,11 @@
                             <div class="table-dropdown">
                                 <div class="table-dropdown__inner">
                                     Цена
-
-                                    <button type="button" class="table-dropdown__trigger btn-light">
+                                    <button type="button" class="table-dropdown__trigger btn-light"  data-dropdown-btn="1">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                         </svg>
                                     </button>
-                                </div>
-
-                                <div class="table-dropdown__content">
-                                    <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
                                 </div>
                             </div>
                         </th>
@@ -951,5 +946,16 @@
     </section>
 </main>
 
+@@include('block/dropdown/dropdown.html', {
+"id": "1",
+"text": "Выберите цену",
+"idSelect": "price",
+"optionTitle1": "Наценка (10,00)",
+"optionValue1": "1",
+"optionTitle2": "Наценка (20,00)",
+"optionValue2": "2",
+"optionTitle3": "Без наценки",
+"optionValue3": "3",
+})
 @@include('block/footer/footer.html')
 @@include('block/scripts.html')
