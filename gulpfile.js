@@ -13,7 +13,13 @@ const { series, parallel, src, dest, lastRun, watch } = require('gulp'),
   svgSprite = require('gulp-svg-sprite'),
   svgmin = require('gulp-svgmin'),
   cheerio = require('gulp-cheerio'),
-  replace = require('gulp-replace');
+  replace = require('gulp-replace'),
+  insert = require('gulp-insert'),
+  yargs = require('yargs'),
+  sassGlob = require('gulp-sass-glob');
+
+const argv = yargs.argv;
+const variant = argv.variant || null;
 
 ///////////////////////////////////////////////////////// path
 const path = {
@@ -51,16 +57,13 @@ const server = () => {
   browserSync({
     server: 'dist',
     notify: true,
-    // open: false,
-    // online: true, // Work Offline Without Internet Connection
-    // tunnel: true
   });
-}
+};
 
 ///////////////////////////////////////////////////////// clean global
 const clean = () => {
   return del(path.dist.html);
-}
+};
 
 ///////////////////////////////////////////////////////// html
 const html = () => {
@@ -71,20 +74,20 @@ const html = () => {
     }))
     .pipe(dest(path.dist.html))
     .pipe(browserSync.stream());
-}
+};
 
 ///////////////////////////////////////////////////////// fonts
 const font = () => {
   return src(path.src.font)
     .pipe(dest(path.dist.font));
-}
+};
 
 ///////////////////////////////////////////////////////// img
 const img = () => {
   return src(path.src.img, { since: lastRun(img) })
     .pipe(dest(path.dist.img))
     .pipe(browserSync.stream());
-}
+};
 
 ///////////////////////////////////////////////////////// sprite
 const sprite = () => {
@@ -118,7 +121,7 @@ const sprite = () => {
     }))
     .pipe(dest(path.dist.img))
     .pipe(browserSync.stream());
-}
+};
 
 ///////////////////////////////////////////////////////// css
 const cssLib = () => {
@@ -130,27 +133,37 @@ const cssLib = () => {
     }))
     .pipe(dest(path.dist.style))
     .pipe(browserSync.stream());
-}
+};
 
 const css = () => {
+  const v = variant || 'variant1';
+  const variantImport = `@import "block/${v}/${v}.scss";\n`;
+
   return src(path.src.style, { sourcemaps: true })
+    .pipe(insert.prepend(variantImport))
+    .pipe(sassGlob()) // раскрывает импорт в список файлов
     .pipe(gulpSass({ outputStyle: 'expanded' }).on("error", notify.onError()))
     .pipe(gcmq())
     .pipe(autoprefixer({ overrideBrowserslist: ['last 15 versions'], cascade: false }))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ basename: 'main', suffix: '.min', extname: '.css' }))
     .pipe(dest(path.dist.style, { sourcemaps: true }))
     .pipe(browserSync.stream());
-}
+};
 
 const cssBuild = () => {
+  const v = variant || 'variant1';
+  const variantImport = `@import "block/${v}/${v}.scss";\n`;
+
   return src(path.src.style)
+    .pipe(insert.prepend(variantImport))
+    .pipe(sassGlob())
     .pipe(gulpSass().on("error", gulpSass.logError))
     .pipe(gcmq())
     .pipe(autoprefixer({ overrideBrowserslist: ['last 15 versions'], cascade: false }))
     .pipe(cleancss())
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ basename: 'main', suffix: '.min', extname: '.css' }))
     .pipe(dest(path.dist.style));
-}
+};
 
 ///////////////////////////////////////////////////////// js
 
@@ -163,7 +176,7 @@ const jsLib = () => {
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest(path.dist.script))
     .pipe(browserSync.stream());
-}
+};
 
 const js = () => {
   return src(path.src.script, { sourcemaps: true })
@@ -172,7 +185,7 @@ const js = () => {
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest(path.dist.script, { sourcemaps: true }))
     .pipe(browserSync.stream());
-}
+};
 
 const jsBuild = () => {
   return src(path.src.script)
@@ -193,7 +206,7 @@ const watcher = () => {
   watch(path.src.styleWatch, css);
   watch(path.src.scriptWatch, js);
   watch(path.src.scriptLib, jsLib);
-}
+};
 
 ///////////////////////////////////////////////////////// task
 exports.default = series(
@@ -227,3 +240,6 @@ exports.build = series(
     jsBuild
   )
 );
+
+exports.css = css;
+exports.cssBuild = cssBuild;

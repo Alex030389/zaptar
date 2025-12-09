@@ -282,7 +282,7 @@
 
 .header-btn-wallet {
   @media (max-width: $lg) {
-  --header-btn-padding-x: #{$gutter * 2};
+    --header-btn-padding-x: #{$gutter * 2};
   }
 
   &__ico {
