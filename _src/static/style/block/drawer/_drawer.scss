@@ -119,16 +119,15 @@
   }
 
   &__contacts {
-    margin-top: auto;
     display: grid;
     gap: $gutter;
-    padding: $gutter * 3 $gutter * 3 $gutter * 6;
+    padding: $gutter * 3;
   }
 
   &__contacts-title {
     font-weight: 600;
     color: $c-main-65;
-    border-bottom: 1px solid $c-main-6;
-    padding-bottom: $gutter;
+    border-top: 1px solid $c-main-6;
+    padding-top: $gutter;
   }
 }
