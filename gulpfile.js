@@ -19,7 +19,7 @@ const { series, parallel, src, dest, lastRun, watch } = require('gulp'),
   sassGlob = require('gulp-sass-glob');
 
 const argv = yargs.argv;
-const variant = argv.variant || null;
+const version = argv.ver || 'v1';
 
 ///////////////////////////////////////////////////////// path
 const path = {
@@ -32,7 +32,10 @@ const path = {
   },
 
   src: {
-    html: ['_src/html/*.html'],
+    html: [
+      '_src/html/*.html',
+      `_src/html/${version}/*.html`
+    ],
     htmlWatch: '_src/html/**/*.html',
     font: ['_src/static/font/**/*'],
     img: [
@@ -67,7 +70,8 @@ const clean = () => {
 
 ///////////////////////////////////////////////////////// html
 const html = () => {
-  return src(path.src.html)
+  return src(path.src.html, { allowEmpty: true })
+    .pipe(replace('$version', version))    // ← подмена версии в путях
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -136,11 +140,10 @@ const cssLib = () => {
 };
 
 const css = () => {
-  const v = variant || 'variant1';
-  const variantImport = `@import "block/${v}/${v}.scss";\n`;
+  const versionImport = `@import "block/${version}/main-${version}.scss";\n`;
 
   return src(path.src.style, { sourcemaps: true })
-    .pipe(insert.prepend(variantImport))
+    .pipe(insert.prepend(versionImport))
     .pipe(sassGlob()) // раскрывает импорт в список файлов
     .pipe(gulpSass({ outputStyle: 'expanded' }).on("error", notify.onError()))
     .pipe(gcmq())
@@ -151,11 +154,10 @@ const css = () => {
 };
 
 const cssBuild = () => {
-  const v = variant || 'variant1';
-  const variantImport = `@import "block/${v}/${v}.scss";\n`;
+  const versionImport = `@import "block/${version}/main-${version}.scss";\n`;
 
   return src(path.src.style)
-    .pipe(insert.prepend(variantImport))
+    .pipe(insert.prepend(versionImport))
     .pipe(sassGlob())
     .pipe(gulpSass().on("error", gulpSass.logError))
     .pipe(gcmq())
