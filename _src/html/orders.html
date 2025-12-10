@@ -13,21 +13,27 @@
                     <svg class="orders__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#folder"></use>
                     </svg>
-                    Архив заказов
+                    <span class="d-md-none">
+                      Архив заказов
+                    </span>
                 </a>
 
                 <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
                     <svg class="orders__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
                     </svg>
-                    Фильтр
+                    <span class="d-md-none">
+                      Фильтр
+                    </span>
                 </button>
                 <!-- Todo: Саша, разберись с иконками на моби -->
                 <button class="btn-primary d-none d-md-flex" type="button" data-modal="drawer-sort">
                     <svg class="orders__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#sort"></use>
                     </svg>
-                    Сортировка
+                    <span class="d-md-none">
+                      Сортировка
+                    </span>
                 </button>
             </div>
         </div>
@@ -140,7 +146,7 @@
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light" data-tippy-content="Информация по заказу">
+                                    <button aria-label="информация по заказу" data-modal="modal-order-details" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
@@ -1241,7 +1247,7 @@
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
+                        <button type="button" data-modal="modal-order-details" aria-label="информация по заказу" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                             </svg>

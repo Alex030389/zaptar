@@ -57,7 +57,7 @@
 
     &--radius {
       border-radius: 16px;
-      width: 434px;
+      width: var(--modal-width, 434px);
     }
 
     #{$self}--wide & {
@@ -111,22 +111,9 @@
   &__header {
     display: grid;
     gap: $gutter * 2;
-    padding: $gutter * 5 $gutter * 6 0;
+    padding: $gutter * 5 $gutter * 6 $gutter * 3;
 
     border-bottom: 1px solid $c-main-6;
-  }
-
-  &__tag {
-    justify-self: flex-start;
-    padding-left: $gutter * 2;
-    padding-right: $gutter * 2;
-    margin-bottom: $gutter * 3;
-    border-radius: 4px;
-    background-color: $c-accent-light;
-
-    font-size: 12px;
-    line-height: 20px;
-    color: $c-accent;
   }
 
   &__wrapper {
