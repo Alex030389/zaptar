@@ -44,7 +44,10 @@
   }
 
   @media (max-width: $md) {
-    padding: $gutter $gutter * 2;
-    min-height: 32px;
+    &:not(#{$self}--size-s),
+    &:not(#{$self}--size-xs) {
+      padding: $gutter $gutter * 2;
+      min-height: 32px;
+    }
   }
 }
