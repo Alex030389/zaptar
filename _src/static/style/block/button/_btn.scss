@@ -84,14 +84,12 @@
         }
 
         &:not(#{$self}--disabled):not(:disabled):is(:active) {
-          border-color: $c-main-65;
-          background-color: $c-main-15;
+          background-color: $c-accent-dark;
         }
       }
 
       &:not(#{$self}--disabled):not(:disabled):is(:active) {
-        border-color: $c-main-65;
-        background-color: $c-main-15;
+        background-color: $c-accent-dark;
       }
     }
 
@@ -168,7 +166,7 @@
   &--disabled {
     border: 1px solid #D9D9D9;
     background-color: $c-light !important;
-    color: #B8B8B8;
+    color: #B8B8B8 !important;
   }
 
   &__badge {
