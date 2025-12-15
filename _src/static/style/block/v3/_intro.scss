@@ -1,6 +1,5 @@
 .intro {
-  padding-top: $gutter * 36;
-  padding-bottom: $gutter * 12;
+  padding-top: $gutter * 32;
 
   // на второстепенных страницах
   &--has-background {
@@ -22,16 +21,52 @@
   display: grid;
   gap: $gutter * 12;
 
-  @media (max-width: $md) {
-    gap: $gutter * 6;
-    padding-top: $gutter * 30;
+  @media (max-width: $lg) {
+    padding-top: $gutter * 26;
   }
 
-  &--padding {
-    padding-top: $gutter * 52;
+  @media (max-width: $md) {
+    gap: $gutter * 6;
+  }
+
+  &--has-pd-top {
+    padding-top: $gutter * 45;
+
+    @media (max-width: $lg) {
+      padding-top: $gutter * 40;
+    }
 
     @media (max-width: $md) {
-      padding-top: $gutter * 40;
+      padding-top: $gutter * 36;
+    }
+  }
+
+  &--has-pd-bottom {
+    padding-bottom: $gutter * 12;
+
+    @media (max-width: $lg) {
+      padding-bottom: $gutter * 6;
+    }
+  }
+
+  &--has-bg {
+    position: relative;
+    background: #000 top center no-repeat url("../img/background/car-auto-service-v3.jpg");
+    background-size: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      background: #111C2CD9;
+    }
+
+    > * {
+      z-index: 1;
     }
   }
 
@@ -184,20 +219,6 @@
     @media (max-width: $md) {
       display: none;
       margin-left: 0;
-    }
-  }
-
-  &__content {
-    position: absolute;
-    bottom: -20px;
-    left: 216px;
-    color: #fff;
-    opacity: 0.8;
-    font-size: 12px;
-    line-height: 20px;
-
-    @media (max-width: $md) {
-      left: 40px;
     }
   }
 

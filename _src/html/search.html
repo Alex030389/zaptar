@@ -1,8 +1,8 @@
 @@include('block/head.html')
-@@include('$version/block/header.html')
+@@include('$version/block/header.html', {"class": "header--has-bg"})
 
 <main class="main{{MAIN_MOD}}">
-    @@include('$version/block/intro.html')
+    @@include('$version/block/intro.html', {"class": "intro--has-pd-bottom intro--has-bg"})
     @@include('block/breadcrumb.html')
 
     <section class="search container">

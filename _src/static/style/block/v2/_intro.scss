@@ -11,7 +11,7 @@
     padding-top: $gutter * 30;
   }
 
-  &--padding {
+  &--has-pd-top {
     padding-top: $gutter * 52;
 
     @media (max-width: $md) {
